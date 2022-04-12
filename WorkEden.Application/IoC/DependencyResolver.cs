@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using WorkEden.Application.AutoMapper;
+using WorkEden.Application.Services.CategoryService;
 
 namespace WorkEden.Application.IoC
 {
@@ -18,6 +19,8 @@ namespace WorkEden.Application.IoC
             builder.RegisterType<CategoryRepo>().As<ICategoryRepo>().InstancePerLifetimeScope();
             builder.RegisterType<ProductRepo>().As<IProductRepo>().InstancePerLifetimeScope();
             builder.RegisterType<AppUserRepo>().As<IAppUserRepo>().InstancePerLifetimeScope();
+
+            builder.RegisterType<CategoryService>().As<ICategoryService>().InstancePerLifetimeScope();
 
             //AutoMapper resolving
             builder.Register(context => new MapperConfiguration(cfg =>
