@@ -3,16 +3,16 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:9799",
+      "applicationUrl": "http://localhost:27955",
       "sslPort": 0
     }
   },
   "profiles": {
-    "EdenWorks": {
+    "EdenWorks.Presentation": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,
-      "applicationUrl": "http://localhost:5041",
+      "applicationUrl": "http://localhost:5125",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }

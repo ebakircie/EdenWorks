@@ -1,4 +1,4 @@
-namespace EdenWorks.Models
+namespace EdenWorks.Presentation.Models
 {
     public class ErrorViewModel
     {
