@@ -13,7 +13,10 @@ namespace EdenWorks.Infrastructure.EntityTypeConfig
         public override void Configure(EntityTypeBuilder<Category> builder)
         {
             builder.HasKey(x => x.Id);
+            builder.Property(x => x.Id).ValueGeneratedOnAdd();
             builder.Property(x => x.CategoryName).IsRequired(true).HasMaxLength(50);
+
+            
 
             base.Configure(builder);
         }

@@ -16,7 +16,7 @@ namespace EdenWorks.Infrastructure.EntityTypeConfig
             builder.HasKey(x => x.Id);
             builder.Property(x => x.Name).IsRequired(true).HasMaxLength(50);
             builder.Property(x => x.Description).IsRequired(false).HasMaxLength(500);
-            builder.Property(x => x.Price).IsRequired(true);
+            builder.Property(x => x.Price).IsRequired(true).HasColumnType(typeName:"money");
 
             //Relations
             builder.HasOne(x => x.Category)

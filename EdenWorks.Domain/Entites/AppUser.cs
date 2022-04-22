@@ -8,8 +8,9 @@ using System.Threading.Tasks;
 
 namespace EdenWorks.Domain.Entites
 {
-    public class AppUser : IdentityUser, IBaseEntity
+    public class AppUser : IdentityUser<int>, IBaseEntity
     {
+
         public DateTime CreatedDate { get; set; }
         public string CreatedIpAddress { get; set; }
         public string CreatedMachineName { get; set; }
@@ -22,5 +23,6 @@ namespace EdenWorks.Domain.Entites
         public string DeletedIpAddress { get; set; }
         public string DeletedMachineName { get; set; }
         public Status Status { get; set; }
+        
     }
 }

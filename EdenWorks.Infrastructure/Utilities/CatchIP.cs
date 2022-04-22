@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace EdenWorks.Infrastructure.Utilities
 {
-    public class CatchIP
+    public static class CatchIP
     {
         public static string GetIpAddress()
         {

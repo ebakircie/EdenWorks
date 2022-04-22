@@ -13,19 +13,21 @@ namespace EdenWorks.Domain.Repositories
     {
         void Create (T entity);
         void Update (T entity);
-        void Delete (T entity);
+        Task Delete (T entity);
 
-        T GetDefault(Expression<Func<T, bool>> expression);
-        List<T> GetDefaults (Expression<Func<T, bool>> expression);
+        Task SetActive(T entity);
 
-        bool Any(Expression<Func<T, bool>> exception);
+        Task <T> GetDefault(Expression<Func<T, bool>> expression);
+        Task <List<T>> GetDefaults (Expression<Func<T, bool>> expression);
 
-        TResult GetFilteredFirstOrDefault<TResult>(Expression<Func<T, TResult>> select,
+        Task <bool> Any(Expression<Func<T, bool>> expression);
+
+        Task<TResult> GetFilteredFirstOrDefault<TResult>(Expression<Func<T, TResult>> select,
                                                          Expression<Func<T, bool>> where,
                                                          Func<IQueryable<T>, IOrderedQueryable<T>> orderBy = null,
                                                          Func<IQueryable<T>, IIncludableQueryable<T, object>> include = null);
 
-        List<TResult> GetFilteredList<TResult>(Expression<Func<T, TResult>> select,
+        Task<List<TResult>> GetFilteredList<TResult>(Expression<Func<T, TResult>> select,
                                                    Expression<Func<T, bool>> where,
                                                    Func<IQueryable<T>, IOrderedQueryable<T>> orderBy = null,
                                                    Func<IQueryable<T>, IIncludableQueryable<T, object>> include = null);

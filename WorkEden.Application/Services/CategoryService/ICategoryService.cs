@@ -8,12 +8,13 @@ namespace WorkEden.Application.Services.CategoryService
     {
         void Create(CreateCategoryDTO model);
         void Update(UpdateCategoryDTO model);
-        void Delete(int id);
+        Task Delete(int id);
 
-        List<CategoryVM> GetCategories();
-        List<CategoryVM> GetPassives();
-        UpdateCategoryDTO GetById(int id);
-        bool isCategoryExist(string name);
+        Task SetActive(int id);
+        Task<List<CategoryVM>> GetCategories();
+        Task<List<CategoryVM>> GetPassives();
+        Task<UpdateCategoryDTO> GetById(int id);
+        Task<bool> isCategoryExist(string name);
 
 
     }

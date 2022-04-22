@@ -2,7 +2,7 @@ using Autofac;
 using Autofac.Extensions.DependencyInjection;
 using EdenWorks.Domain.Entites;
 using EdenWorks.Infrastructure;
-using Microsoft.AspNetCore.Identity;
+using FluentValidation.AspNetCore;
 using Microsoft.EntityFrameworkCore;
 using WorkEden.Application.IoC;
 
@@ -10,6 +10,12 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddControllers().AddFluentValidation(fv =>
+{
+    fv.RunDefaultMvcValidationAfterFluentValidationExecutes=false;
+    fv.RegisterValidatorsFromAssemblyContaining<Program>();
+});
+
 
 builder.Services.AddRazorPages()
     .AddRazorRuntimeCompilation();
@@ -20,9 +26,13 @@ builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
 
-builder.Services.AddIdentity<AppUser, IdentityRole>(options =>
+//AddDefaultIdentity comes with Microsoft.AspNetCore.Identity.UI,
+//Required to change default identity value type (from guid to int)
+builder.Services.AddDefaultIdentity<AppUser>(options => 
 {
     options.Password.RequiredLength = 6;
+    options.SignIn.RequireConfirmedAccount = true;
+    
 }).AddEntityFrameworkStores<AppDbContext>();
 
 //Autofac IoC

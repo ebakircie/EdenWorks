@@ -14,17 +14,17 @@ namespace EdenWorks.Infrastructure.EntityTypeConfig
         public virtual void Configure(EntityTypeBuilder<T> builder)
         {
             builder.Property(x => x.CreatedDate).IsRequired(true);
-            builder.Property(x => x.CreatedIpAddress).IsRequired(true);
-            builder.Property(x => x.CreatedMachineName).IsRequired(true);
+            builder.Property(x => x.CreatedIpAddress).IsRequired(false).HasMaxLength(30);
+            builder.Property(x => x.CreatedMachineName).IsRequired(false).HasMaxLength(70);
 
             builder.Property(x => x.UpdatedDate).IsRequired(false);
-            builder.Property(x => x.UpdatedIpAddress).IsRequired(false);
-            builder.Property(x => x.UpdatedMachineName).IsRequired(false);
+            builder.Property(x => x.UpdatedIpAddress).IsRequired(false).HasMaxLength(30);
+            builder.Property(x => x.UpdatedMachineName).IsRequired(false).HasMaxLength(70);
 
             builder.Property(x => x.DeletedDate).IsRequired(false);
-            builder.Property(x => x.DeletedIpAddress).IsRequired(false);
-            builder.Property(x => x.DeletedMachineName).IsRequired(false);
-            builder.Property(x => x.Status).IsRequired(true);
+            builder.Property(x => x.DeletedIpAddress).IsRequired(false).HasMaxLength(30);
+            builder.Property(x => x.DeletedMachineName).IsRequired(false).HasMaxLength(70);
+            
         }
     }
 }

@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace EdenWorks.Infrastructure.Migrations
 {
-    public partial class firstInialize : Migration
+    public partial class secondInitialize : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -13,7 +13,8 @@ namespace EdenWorks.Infrastructure.Migrations
                 name: "AspNetRoles",
                 columns: table => new
                 {
-                    Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
                     NormalizedName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
                     ConcurrencyStamp = table.Column<string>(type: "nvarchar(max)", nullable: true)
@@ -27,16 +28,17 @@ namespace EdenWorks.Infrastructure.Migrations
                 name: "AspNetUsers",
                 columns: table => new
                 {
-                    Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    CreatedIpAddress = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    CreatedMachineName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    CreatedIpAddress = table.Column<string>(type: "nvarchar(30)", maxLength: 30, nullable: true),
+                    CreatedMachineName = table.Column<string>(type: "nvarchar(70)", maxLength: 70, nullable: true),
                     UpdatedDate = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    UpdatedIpAddress = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    UpdatedMachineName = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    UpdatedIpAddress = table.Column<string>(type: "nvarchar(30)", maxLength: 30, nullable: true),
+                    UpdatedMachineName = table.Column<string>(type: "nvarchar(70)", maxLength: 70, nullable: true),
                     DeletedDate = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    DeletedIpAddress = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    DeletedMachineName = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    DeletedIpAddress = table.Column<string>(type: "nvarchar(30)", maxLength: 30, nullable: true),
+                    DeletedMachineName = table.Column<string>(type: "nvarchar(70)", maxLength: 70, nullable: true),
                     Status = table.Column<int>(type: "int", nullable: false),
                     UserName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: false),
                     NormalizedUserName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
@@ -65,15 +67,15 @@ namespace EdenWorks.Infrastructure.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     CategoryName = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
-                    CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    CreatedIpAddress = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    CreatedMachineName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    CreatedIpAddress = table.Column<string>(type: "nvarchar(30)", maxLength: 30, nullable: true),
+                    CreatedMachineName = table.Column<string>(type: "nvarchar(70)", maxLength: 70, nullable: true),
                     UpdatedDate = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    UpdatedIpAddress = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    UpdatedMachineName = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    UpdatedIpAddress = table.Column<string>(type: "nvarchar(30)", maxLength: 30, nullable: true),
+                    UpdatedMachineName = table.Column<string>(type: "nvarchar(70)", maxLength: 70, nullable: true),
                     DeletedDate = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    DeletedIpAddress = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    DeletedMachineName = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    DeletedIpAddress = table.Column<string>(type: "nvarchar(30)", maxLength: 30, nullable: true),
+                    DeletedMachineName = table.Column<string>(type: "nvarchar(70)", maxLength: 70, nullable: true),
                     Status = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
@@ -87,7 +89,7 @@ namespace EdenWorks.Infrastructure.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    RoleId = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    RoleId = table.Column<int>(type: "int", nullable: false),
                     ClaimType = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     ClaimValue = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
@@ -108,7 +110,7 @@ namespace EdenWorks.Infrastructure.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    UserId = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    UserId = table.Column<int>(type: "int", nullable: false),
                     ClaimType = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     ClaimValue = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
@@ -127,10 +129,10 @@ namespace EdenWorks.Infrastructure.Migrations
                 name: "AspNetUserLogins",
                 columns: table => new
                 {
-                    LoginProvider = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    ProviderKey = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    LoginProvider = table.Column<string>(type: "nvarchar(128)", maxLength: 128, nullable: false),
+                    ProviderKey = table.Column<string>(type: "nvarchar(128)", maxLength: 128, nullable: false),
                     ProviderDisplayName = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    UserId = table.Column<string>(type: "nvarchar(450)", nullable: false)
+                    UserId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -147,8 +149,8 @@ namespace EdenWorks.Infrastructure.Migrations
                 name: "AspNetUserRoles",
                 columns: table => new
                 {
-                    UserId = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    RoleId = table.Column<string>(type: "nvarchar(450)", nullable: false)
+                    UserId = table.Column<int>(type: "int", nullable: false),
+                    RoleId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -171,9 +173,9 @@ namespace EdenWorks.Infrastructure.Migrations
                 name: "AspNetUserTokens",
                 columns: table => new
                 {
-                    UserId = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    LoginProvider = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    Name = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    UserId = table.Column<int>(type: "int", nullable: false),
+                    LoginProvider = table.Column<string>(type: "nvarchar(128)", maxLength: 128, nullable: false),
+                    Name = table.Column<string>(type: "nvarchar(128)", maxLength: 128, nullable: false),
                     Value = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
@@ -195,16 +197,17 @@ namespace EdenWorks.Infrastructure.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     Description = table.Column<string>(type: "nvarchar(500)", maxLength: 500, nullable: true),
-                    Price = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
-                    CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    CreatedIpAddress = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    CreatedMachineName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Price = table.Column<decimal>(type: "money", nullable: false),
+                    ImagePath = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    CreatedIpAddress = table.Column<string>(type: "nvarchar(30)", maxLength: 30, nullable: true),
+                    CreatedMachineName = table.Column<string>(type: "nvarchar(70)", maxLength: 70, nullable: true),
                     UpdatedDate = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    UpdatedIpAddress = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    UpdatedMachineName = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    UpdatedIpAddress = table.Column<string>(type: "nvarchar(30)", maxLength: 30, nullable: true),
+                    UpdatedMachineName = table.Column<string>(type: "nvarchar(70)", maxLength: 70, nullable: true),
                     DeletedDate = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    DeletedIpAddress = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    DeletedMachineName = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    DeletedIpAddress = table.Column<string>(type: "nvarchar(30)", maxLength: 30, nullable: true),
+                    DeletedMachineName = table.Column<string>(type: "nvarchar(70)", maxLength: 70, nullable: true),
                     Status = table.Column<int>(type: "int", nullable: false),
                     CategoryId = table.Column<int>(type: "int", nullable: false)
                 },

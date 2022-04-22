@@ -9,15 +9,15 @@ namespace EdenWorks.Domain.Entites
 {
     public interface IBaseEntity
     {
-
-        DateTime CreatedDate { get; set; }
-        string CreatedIpAddress { get; set; }
-        string CreatedMachineName { get; set; }
-
+        
+         DateTime CreatedDate { get; set; }
+         string CreatedIpAddress { get; set; }
+         string CreatedMachineName { get; set; }
+   
         DateTime? UpdatedDate { get; set; }
         string UpdatedIpAddress { get; set; }
         string UpdatedMachineName { get; set; }
-
+        
         DateTime? DeletedDate { get; set; }
         string DeletedIpAddress { get; set; }
         string DeletedMachineName { get; set; }
