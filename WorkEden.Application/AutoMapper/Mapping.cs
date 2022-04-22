@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using WorkEden.Application.Models.DTOs.CategoryDTO;
+using WorkEden.Application.Models.VMs.CategoryVM;
 
 namespace WorkEden.Application.AutoMapper
 {
@@ -14,6 +15,8 @@ namespace WorkEden.Application.AutoMapper
         public Mapping()
         {
             CreateMap<Category, CreateCategoryDTO>().ReverseMap();
+            CreateMap<Category, UpdateCategoryDTO>().ReverseMap();
+            CreateMap<CategoryVM,UpdateCategoryDTO>().ReverseMap();
         }
     }
 }

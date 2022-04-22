@@ -27,26 +27,30 @@ namespace EdenWorks.Infrastructure.Repositories
             _appDbContext.Entry<T>(entity).State = EntityState.Modified;
             _appDbContext.SaveChanges();
         }
-        public void Delete(T entity)
+        public async Task Delete(T entity)
         {
-            _appDbContext.SaveChanges();
+            await _appDbContext.SaveChangesAsync();
         }
-        public bool Any(Expression<Func<T, bool>> exception)
+        public async Task SetActive(T entity)
         {
-            return table.Any(exception);
+            await _appDbContext.SaveChangesAsync();
         }
-
-        public T GetDefault(Expression<Func<T, bool>> expression)
+        public async Task<bool> Any(Expression<Func<T, bool>> exception)
         {
-            return table.FirstOrDefault(expression);
-        }
-
-        public List<T> GetDefaults(Expression<Func<T, bool>> expression)
-        {
-            return table.Where(expression).ToList();
+            return await table.AnyAsync(exception);
         }
 
-        public TResult GetFilteredFirstOrDefault<TResult>(Expression<Func<T, TResult>> select,
+        public async Task<T> GetDefault(Expression<Func<T, bool>> expression)
+        {
+            return await table.FirstOrDefaultAsync(expression);
+        }
+
+        public async Task<List<T>> GetDefaults(Expression<Func<T, bool>> expression)
+        {
+            return await table.Where(expression).ToListAsync();
+        }
+
+        public async Task<TResult> GetFilteredFirstOrDefault<TResult>(Expression<Func<T, TResult>> select,
                                                           Expression<Func<T, bool>> where, Func<IQueryable<T>,
                                                           IOrderedQueryable<T>> orderBy = null,
                                                           Func<IQueryable<T>, IIncludableQueryable<T, object>> include = null)
@@ -63,15 +67,15 @@ namespace EdenWorks.Infrastructure.Repositories
             }
             if (orderBy != null)
             {
-                return orderBy(query).Select(select).FirstOrDefault();
+                return await orderBy(query).Select(select).FirstOrDefaultAsync();
             }
             else
             {
-                return query.Select(select).FirstOrDefault();
+                return await query.Select(select).FirstOrDefaultAsync();
             }
         }
 
-        public List<TResult> GetFilteredList<TResult>(Expression<Func<T, TResult>> select,
+        public async Task<List<TResult>> GetFilteredList<TResult>(Expression<Func<T, TResult>> select,
                                                       Expression<Func<T, bool>> where, Func<IQueryable<T>,
                                                       IOrderedQueryable<T>> orderBy = null, Func<IQueryable<T>,
                                                       IIncludableQueryable<T, object>> include = null)
@@ -88,14 +92,14 @@ namespace EdenWorks.Infrastructure.Repositories
             }
             if (orderBy != null)
             {
-                return orderBy(query).Select(select).ToList();
+                return await orderBy(query).Select(select).ToListAsync();
             }
             else
             {
-                return query.Select(select).ToList();
+                return await query.Select(select).ToListAsync();
             }
         }
 
-
+       
     }
 }

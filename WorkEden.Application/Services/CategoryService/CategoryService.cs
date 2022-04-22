@@ -4,6 +4,7 @@ using EdenWorks.Domain.Repositories;
 using EdenWorks.Domain.Enums;
 using WorkEden.Application.Models.DTOs.CategoryDTO;
 using WorkEden.Application.Models.VMs.CategoryVM;
+using EdenWorks.Infrastructure.Utilities;
 
 namespace WorkEden.Application.Services.CategoryService
 {
@@ -25,67 +26,83 @@ namespace WorkEden.Application.Services.CategoryService
             _categoryRepo.Create(category);
         }
 
-        public void Delete(int id)
+        public async Task Delete(int id)
         {
-            Category category = _categoryRepo.GetDefault(x => x.Id == id);
+            Category category = await _categoryRepo.GetDefault(x => x.Id == id);
             category.DeletedDate = DateTime.Now;
+            category.DeletedIpAddress = CatchIP.IpAddress;
+            category.DeletedMachineName = Environment.MachineName;
             category.Status = Status.Passive;
+            await _categoryRepo.Delete(category);
+        }
 
-            _categoryRepo.Delete(category);
+       public async Task SetActive(int id)
+        {
+            Category category = await _categoryRepo.GetDefault(x => x.Id == id);
+            category.UpdatedDate = DateTime.Now;
+            category.UpdatedIpAddress = CatchIP.IpAddress;
+            category.UpdatedMachineName = Environment.MachineName;
+            category.Status = Status.Modified;
+            await _categoryRepo.SetActive(category);
         }
         public void Update(UpdateCategoryDTO model)
         {
-            var updateCategory = _mapper.Map<Category>(model);
-            _categoryRepo.Update(updateCategory);
+            var category = _mapper.Map<Category>(model);
+            _categoryRepo.Update(category);
         }
-        
 
-        public UpdateCategoryDTO GetById(int id)
+
+        public async Task<UpdateCategoryDTO> GetById(int id)
         {
-            var category = _categoryRepo.GetFilteredFirstOrDefault(
+            var category = await _categoryRepo.GetFilteredFirstOrDefault(
                 select: x => new CategoryVM
                 {
                     Id = x.Id,
                     CategoryName = x.CategoryName,
+                    CreatedDate = x.CreatedDate,
+                    CreatedIpAddress = x.CreatedIpAddress,
+                    CreatedMachineName = x.CreatedMachineName,
+                    
                 },
-                where: x => x.Id == id);
+                where: x => x.Id == id&&
+                            x.Status != Status.Passive);
 
             var model = _mapper.Map<UpdateCategoryDTO>(category);
             return model;
         }
 
-        public List<CategoryVM> GetCategories()
+        public async Task<List<CategoryVM>> GetCategories()
         {
-            var categories = _categoryRepo.GetFilteredList(
+            var categories = await _categoryRepo.GetFilteredList(
                 select: x => new CategoryVM
                 {
                     Id = x.Id,
                     CategoryName = x.CategoryName
                 },
                 where: x => x.Status != Status.Passive,
-                orderBy: x => x.OrderBy(x => x.CategoryName));
+                orderBy: x => x.OrderBy(x => x.Id));
 
             return categories;
         }
-        public List<CategoryVM> GetPassives()
+        public async Task<List<CategoryVM>> GetPassives()
         {
-            var categories = _categoryRepo.GetFilteredList(
+            var categories = await _categoryRepo.GetFilteredList(
                 select: x => new CategoryVM
                 {
                     Id = x.Id,
-                    CategoryName= x.CategoryName
+                    CategoryName = x.CategoryName
                 },
-                where: x=> x.Status == Status.Passive);
+                where: x => x.Status == Status.Passive);
 
             return categories;
         }
 
-        public bool isCategoryExist(string name)
+        public async Task<bool> isCategoryExist(string name)
         {
-            var result = _categoryRepo.Any(x => x.CategoryName == name);
+            var result = await _categoryRepo.Any(x => x.CategoryName == name);
             return result;
         }
 
-   
+
     }
 }
