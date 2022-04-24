@@ -14,9 +14,14 @@ namespace EdenWorks.Infrastructure.EntityTypeConfig
         public override void Configure(EntityTypeBuilder<Product> builder)
         {
             builder.HasKey(x => x.Id);
-            builder.Property(x => x.Name).IsRequired(true).HasMaxLength(50);
+            builder.Property(x => x.Name).IsRequired(false).HasMaxLength(50);
             builder.Property(x => x.Description).IsRequired(false).HasMaxLength(500);
-            builder.Property(x => x.Price).IsRequired(true).HasColumnType(typeName:"money");
+            builder.Property(x => x.ImagePath).IsRequired(false);
+            builder.Property(x => x.Price)
+                .HasPrecision(18, 5)
+                .HasConversion<decimal>()
+                .IsRequired(true);
+
 
             //Relations
             builder.HasOne(x => x.Category)

@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EdenWorks.Infrastructure", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EdenWorks.Presentation", "EdenWorks.Presentation\EdenWorks.Presentation.csproj", "{316D8379-2738-4F03-B424-A572DD165341}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WorkEden.Application", "WorkEden.Application\WorkEden.Application.csproj", "{BD1A11E2-8EF3-4E55-A544-C02313A0EF26}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EdenWorks.Application", "WorkEden.Application\EdenWorks.Application.csproj", "{BD1A11E2-8EF3-4E55-A544-C02313A0EF26}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,0 +1,52 @@
+﻿@model UpdateProductDTO
+@{
+    ViewData["Title"] = "Update";
+}
+
+<div class="row ml-2 mt-2 mr-2">
+    <div class="col-sm-6">
+        <div class="card card-primary">
+            <div class="card-header">
+                <h3 class="card-title">Update Product</h3>
+            </div>
+            <form asp-action="Update" enctype="multipart/form-data" method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+               @* <input type = "hidden" asp-for="CategoryId" />*@
+
+                <div class="form-group">
+                    <label asp-for="Name">Product Name</label>
+                    <input class="form-control" asp-for="Name">
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Price">Price</label>
+                    <input class="form-control" asp-for="Price" />
+                    <span asp-validation-for="Price" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Description">Description</label>
+                    <textarea class="form-control" asp-for="Description" rows="4"></textarea>
+                    <span asp-validation-for="Description" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="UploadPath">Choose an image</label>
+                    <input type="file" class="form-control" asp-for="UploadPath" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="CategoryId">Choose a Category</label>
+                    <select asp-for="CategoryId" class="form-control">
+                        @foreach (var item in Model.Categories)
+                        {
+                            <option value="@item.Id">@item.CategoryName</option>
+                        }
+                    </select>
+                </div>
+                <div class="card-footer">
+                    <a asp-action="List" class="btn btn-dark btn-sm mr-2 float-end">Back To List</a>
+                    <input type="submit" class="btn btn-primary btn-sm float-end mr-2" value="Submit" />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+

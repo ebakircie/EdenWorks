@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace EdenWorks.Infrastructure.Migrations
 {
-    public partial class secondInitialize : Migration
+    public partial class firstInit : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -30,7 +30,7 @@ namespace EdenWorks.Infrastructure.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     CreatedIpAddress = table.Column<string>(type: "nvarchar(30)", maxLength: 30, nullable: true),
                     CreatedMachineName = table.Column<string>(type: "nvarchar(70)", maxLength: 70, nullable: true),
                     UpdatedDate = table.Column<DateTime>(type: "datetime2", nullable: true),
@@ -67,7 +67,7 @@ namespace EdenWorks.Infrastructure.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     CategoryName = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
-                    CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     CreatedIpAddress = table.Column<string>(type: "nvarchar(30)", maxLength: 30, nullable: true),
                     CreatedMachineName = table.Column<string>(type: "nvarchar(70)", maxLength: 70, nullable: true),
                     UpdatedDate = table.Column<DateTime>(type: "datetime2", nullable: true),
@@ -198,8 +198,8 @@ namespace EdenWorks.Infrastructure.Migrations
                     Name = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     Description = table.Column<string>(type: "nvarchar(500)", maxLength: 500, nullable: true),
                     Price = table.Column<decimal>(type: "money", nullable: false),
-                    ImagePath = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    ImagePath = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     CreatedIpAddress = table.Column<string>(type: "nvarchar(30)", maxLength: 30, nullable: true),
                     CreatedMachineName = table.Column<string>(type: "nvarchar(70)", maxLength: 70, nullable: true),
                     UpdatedDate = table.Column<DateTime>(type: "datetime2", nullable: true),

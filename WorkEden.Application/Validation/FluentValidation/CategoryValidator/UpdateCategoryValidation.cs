@@ -4,9 +4,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using WorkEden.Application.Models.DTOs.CategoryDTO;
+using EdenWorks.Application.Models.DTOs.CategoryDTO;
 
-namespace WorkEden.Application.Validation.FluentValidation.CategoryValidator
+namespace EdenWorks.Application.Validation.FluentValidation.CategoryValidator
 {
     public class UpdateCategoryValidation : AbstractValidator<UpdateCategoryDTO>
     {

@@ -8,7 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\EdenWorks.Infrastructure\EdenWorks.Infrastructure.csproj" />
-    <ProjectReference Include="..\WorkEden.Application\WorkEden.Application.csproj" />
+    <ProjectReference Include="..\WorkEden.Application\EdenWorks.Application.csproj" />
   </ItemGroup>
 
   <ItemGroup>
@@ -23,7 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\media\" />
+    <Folder Include="wwwroot\image\products\" />
   </ItemGroup>
 
 </Project>

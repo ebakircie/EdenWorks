@@ -1,7 +1,7 @@
 ﻿using EdenWorks.Presentation.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
-using WorkEden.Application.Services.CategoryService;
+using EdenWorks.Application.Services.CategoryService;
 
 namespace EdenWorks.Presentation.Controllers
 {

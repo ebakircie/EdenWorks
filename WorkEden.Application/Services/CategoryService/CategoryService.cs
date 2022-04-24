@@ -2,11 +2,11 @@
 using EdenWorks.Domain.Entites;
 using EdenWorks.Domain.Repositories;
 using EdenWorks.Domain.Enums;
-using WorkEden.Application.Models.DTOs.CategoryDTO;
-using WorkEden.Application.Models.VMs.CategoryVM;
 using EdenWorks.Infrastructure.Utilities;
+using EdenWorks.Application.Models.DTOs.CategoryDTO;
+using EdenWorks.Application.Models.VMs.CategoryVM;
 
-namespace WorkEden.Application.Services.CategoryService
+namespace EdenWorks.Application.Services.CategoryService
 {
     public class CategoryService : ICategoryService
     {
@@ -45,10 +45,10 @@ namespace WorkEden.Application.Services.CategoryService
             category.Status = Status.Modified;
             await _categoryRepo.SetActive(category);
         }
-        public void Update(UpdateCategoryDTO model)
+        public async Task Update(UpdateCategoryDTO model)
         {
             var category = _mapper.Map<Category>(model);
-            _categoryRepo.Update(category);
+            await _categoryRepo.Update(category);
         }
 
 
@@ -75,6 +75,19 @@ namespace WorkEden.Application.Services.CategoryService
         {
             var categories = await _categoryRepo.GetFilteredList(
                 select: x => new CategoryVM
+                {
+                    Id = x.Id,
+                    CategoryName = x.CategoryName
+                },
+                where: x => x.Status != Status.Passive,
+                orderBy: x => x.OrderBy(x => x.Id));
+
+            return categories;
+        }
+        public async Task<List<CategoryListVM>> GetCategoriesList()
+        {
+            var categories = await _categoryRepo.GetFilteredList(
+                select: x => new CategoryListVM
                 {
                     Id = x.Id,
                     CategoryName = x.CategoryName

@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WorkEden.Application.Extensions
+namespace EdenWorks.Application.Extensions
 {
     public class PictureFileValidation:ValidationAttribute
     {

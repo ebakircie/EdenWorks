@@ -4,7 +4,7 @@ using EdenWorks.Domain.Entites;
 using EdenWorks.Infrastructure;
 using FluentValidation.AspNetCore;
 using Microsoft.EntityFrameworkCore;
-using WorkEden.Application.IoC;
+using EdenWorks.Application.IoC;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,7 +12,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddControllers().AddFluentValidation(fv =>
 {
-    fv.RunDefaultMvcValidationAfterFluentValidationExecutes=false;
+    fv.DisableDataAnnotationsValidation=false;
     fv.RegisterValidatorsFromAssemblyContaining<Program>();
 });
 
