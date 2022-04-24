@@ -1,6 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using WorkEden.Application.Models.DTOs.CategoryDTO;
-using WorkEden.Application.Services.CategoryService;
+﻿using EdenWorks.Application.Models.DTOs.CategoryDTO;
+using EdenWorks.Application.Services.CategoryService;
+using Microsoft.AspNetCore.Mvc;
+
 
 namespace EdenWorks.Presentation.Areas.Admin.Controllers
 {
@@ -13,7 +14,7 @@ namespace EdenWorks.Presentation.Areas.Admin.Controllers
         {
             _categoryService = categoryService;
         }
-         
+
 
         public IActionResult Create()
         {
@@ -21,7 +22,7 @@ namespace EdenWorks.Presentation.Areas.Admin.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create (CreateCategoryDTO model)
+        public async Task<IActionResult> Create(CreateCategoryDTO model)
         {
             if (ModelState.IsValid)
             {
@@ -34,7 +35,7 @@ namespace EdenWorks.Presentation.Areas.Admin.Controllers
                 }
                 else
                 {
-                    TempData["Warning"] = model.CategoryName + "already exist.!";
+                    TempData["Warning"] = model.CategoryName + " already exist.!";
                     return View(model);
                 }
             }
@@ -45,7 +46,7 @@ namespace EdenWorks.Presentation.Areas.Admin.Controllers
             }
         }
 
-        public  async Task<IActionResult> List()
+        public async Task<IActionResult> List()
         {
             return View(await _categoryService.GetCategories());
         }
@@ -56,7 +57,7 @@ namespace EdenWorks.Presentation.Areas.Admin.Controllers
             return View(result);
         }
         [HttpPost]
-        public async Task<IActionResult> Update (UpdateCategoryDTO model)
+        public async Task<IActionResult> Update(UpdateCategoryDTO model)
         {
             if (ModelState.IsValid)
             {
@@ -64,7 +65,7 @@ namespace EdenWorks.Presentation.Areas.Admin.Controllers
                 if (!result)
                 {
                     TempData["Success"] = "Category has been updated.!";
-                    _categoryService.Update(model);
+                    await _categoryService.Update(model);
                     return RedirectToAction("List");
                 }
                 else
@@ -72,7 +73,7 @@ namespace EdenWorks.Presentation.Areas.Admin.Controllers
                     TempData["Warning"] = model.CategoryName + " already exist.!";
                     return View(model);
                 }
-                
+
             }
             else
             {
@@ -81,9 +82,9 @@ namespace EdenWorks.Presentation.Areas.Admin.Controllers
             }
         }
 
-        public async Task<IActionResult> Delete (int id)
+        public async Task<IActionResult> Delete(int id)
         {
-           await _categoryService.Delete(id);
+            await _categoryService.Delete(id);
             return RedirectToAction("List");
         }
 
@@ -91,7 +92,7 @@ namespace EdenWorks.Presentation.Areas.Admin.Controllers
         {
             return View(await _categoryService.GetPassives());
         }
-        
+
         public async Task<IActionResult> SetActive(int id)
         {
             await _categoryService.SetActive(id);

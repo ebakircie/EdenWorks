@@ -12,7 +12,7 @@ namespace EdenWorks.Domain.Repositories
     public interface IBaseRepo<T> where T : IBaseEntity
     {
         void Create (T entity);
-        void Update (T entity);
+        Task Update (T entity);
         Task Delete (T entity);
 
         Task SetActive(T entity);

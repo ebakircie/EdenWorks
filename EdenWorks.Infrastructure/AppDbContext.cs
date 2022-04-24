@@ -10,9 +10,6 @@ using Microsoft.EntityFrameworkCore;
 namespace EdenWorks.Infrastructure
 {
     public class AppDbContext : IdentityDbContext<AppUser, IdentityRole<int>, int>
-
-
-
     {
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 

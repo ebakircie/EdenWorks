@@ -1,7 +1,7 @@
 ﻿using EdenWorks.Domain.Enums;
 using EdenWorks.Infrastructure.Utilities;
 
-namespace WorkEden.Application.Models.DTOs.CategoryDTO
+namespace EdenWorks.Application.Models.DTOs.CategoryDTO
 {
     public class CreateCategoryDTO
     {

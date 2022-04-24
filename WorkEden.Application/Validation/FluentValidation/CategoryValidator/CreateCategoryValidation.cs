@@ -1,15 +1,14 @@
 ﻿using FluentValidation;
-using WorkEden.Application.Models.DTOs.CategoryDTO;
+using EdenWorks.Application.Models.DTOs.CategoryDTO;
 
-namespace WorkEden.Application.Validation.FluentValidation.CategoryValidator
+namespace EdenWorks.Application.Validation.FluentValidation.CategoryValidator
 {
     public class CreateCategoryValidation : AbstractValidator<CreateCategoryDTO>
     {
         public CreateCategoryValidation()
         {
             RuleFor(x => x.CategoryName).NotEmpty()
-                                       .WithMessage("Category name cannot be blank!")
-                                       .MinimumLength(5)
+                                       .MinimumLength(2)
                                        .MaximumLength(50);
         }
     }

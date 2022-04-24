@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EdenWorks.Infrastructure.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20220422153753_secondinit")]
-    partial class secondinit
+    [Migration("20220423152023_firstInit")]
+    partial class firstInit
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -221,7 +221,6 @@ namespace EdenWorks.Infrastructure.Migrations
                         .HasColumnType("nvarchar(500)");
 
                     b.Property<string>("ImagePath")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")

@@ -22,10 +22,10 @@ namespace EdenWorks.Infrastructure.Repositories
             table.Add(entity);
             _appDbContext.SaveChanges();
         }
-        public void Update(T entity)
+        public async Task Update(T entity)
         {
             _appDbContext.Entry<T>(entity).State = EntityState.Modified;
-            _appDbContext.SaveChanges();
+             await _appDbContext.SaveChangesAsync();
         }
         public async Task Delete(T entity)
         {
@@ -76,7 +76,7 @@ namespace EdenWorks.Infrastructure.Repositories
         }
 
         public async Task<List<TResult>> GetFilteredList<TResult>(Expression<Func<T, TResult>> select,
-                                                      Expression<Func<T, bool>> where, Func<IQueryable<T>,
+                                                      Expression<Func<T, bool>> where = null, Func<IQueryable<T>,
                                                       IOrderedQueryable<T>> orderBy = null, Func<IQueryable<T>,
                                                       IIncludableQueryable<T, object>> include = null)
         {

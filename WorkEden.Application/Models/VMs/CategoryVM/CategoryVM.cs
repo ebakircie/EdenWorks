@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WorkEden.Application.Models.VMs.CategoryVM
+namespace EdenWorks.Application.Models.VMs.CategoryVM
 {
     public class CategoryVM
     {

@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EdenWorks.Infrastructure.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20220419151517_secondInitialize")]
-    partial class secondInitialize
+    [Migration("20220423211036_kk")]
+    partial class kk
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -39,7 +39,7 @@ namespace EdenWorks.Infrastructure.Migrations
                         .IsConcurrencyToken()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime?>("CreatedDate")
+                    b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("CreatedIpAddress")
@@ -142,7 +142,7 @@ namespace EdenWorks.Infrastructure.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
-                    b.Property<DateTime?>("CreatedDate")
+                    b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("CreatedIpAddress")
@@ -194,7 +194,7 @@ namespace EdenWorks.Infrastructure.Migrations
                     b.Property<int>("CategoryId")
                         .HasColumnType("int");
 
-                    b.Property<DateTime?>("CreatedDate")
+                    b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("CreatedIpAddress")
@@ -221,16 +221,15 @@ namespace EdenWorks.Infrastructure.Migrations
                         .HasColumnType("nvarchar(500)");
 
                     b.Property<string>("ImagePath")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
-                        .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
                     b.Property<decimal>("Price")
-                        .HasColumnType("money");
+                        .HasPrecision(18, 5)
+                        .HasColumnType("decimal(18,5)");
 
                     b.Property<int>("Status")
                         .HasColumnType("int");
