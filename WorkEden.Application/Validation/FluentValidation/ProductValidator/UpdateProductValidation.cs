@@ -12,7 +12,9 @@ namespace EdenWorks.Application.Validation.FluentValidation.ProductValidator
     {
         public UpdateProductValidation()
         {
-            RuleFor(x => x.Name).NotEmpty();
+            RuleFor(x => x.Name).NotEmpty().MinimumLength(2).MaximumLength(50);
+            RuleFor(x => x.Price).NotEmpty();
+            RuleFor(x => x.CategoryId).NotEmpty();
         }
     }
 }

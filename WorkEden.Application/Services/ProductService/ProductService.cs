@@ -55,10 +55,6 @@ namespace EdenWorks.Application.Services.ProductService
                 image.Save("wwwroot/image/products/" + guid + ".jpg");
                 product.ImagePath = "/image/products/" + guid + ".jpg";
             }
-            product.Status = Status.Modified;
-            product.UpdatedDate = DateTime.Now;
-            product.UpdatedIpAddress = CatchIP.IpAddress;
-            product.UpdatedMachineName = Environment.MachineName;
             await _productRepo.Update(product);
 
         }
