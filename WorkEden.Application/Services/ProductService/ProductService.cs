@@ -44,19 +44,24 @@ namespace EdenWorks.Application.Services.ProductService
             _productRepo.Create(product);
         }
 
-        public async Task Update(UpdateProductDTO model)//updated bilgilerini burada handle edicem,VM e,hidden inputlarda gerek kalmıcak. DENEME
+        public async Task Update(UpdateProductDTO model)
         {
             var product = _mapper.Map<Product>(model);
             if (model.UploadPath != null)
             {
+                if (product.ImagePath != null)
+                {
+                    string imagepath = product.ImagePath;
+                    System.IO.File.Delete("wwwroot/" + imagepath); // ask if needed
+                }
                 using var image = Image.Load(model.UploadPath.OpenReadStream());
                 image.Mutate(x => x.Resize(256, 256));
                 string guid = Guid.NewGuid().ToString();
                 image.Save("wwwroot/image/products/" + guid + ".jpg");
                 product.ImagePath = "/image/products/" + guid + ".jpg";
             }
+            
             await _productRepo.Update(product);
-
         }
         public async Task Delete(int id)
         {
@@ -79,6 +84,10 @@ namespace EdenWorks.Application.Services.ProductService
                     Description = x.Description,
                     Price = x.Price,
                     ImagePath = x.ImagePath,
+                    CreatedDate = x.CreatedDate,
+                    CreatedIpAddress = x.CreatedIpAddress,
+                    CreatedMachineName = x.CreatedMachineName,
+
 
                 },
                 where: x => x.Id == id && x.Status != Status.Passive);

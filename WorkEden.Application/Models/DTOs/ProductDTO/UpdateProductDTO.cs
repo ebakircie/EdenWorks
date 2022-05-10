@@ -12,7 +12,7 @@ namespace EdenWorks.Application.Models.DTOs.ProductDTO
         public string Name { get; set; }
         public string Description { get; set; }
         public decimal Price { get; set; }
-        //public string ImagePath {get; set;} denenmedi
+        public string? ImagePath {get; set;}
         public IFormFile? UploadPath { get; set; }
 
         public DateTime UpdatedDate => DateTime.Now;

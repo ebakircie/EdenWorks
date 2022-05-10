@@ -14,5 +14,10 @@ namespace EdenWorks.Application.Models.VMs.ProductVM
         public string CategoryName { get; set; }
         public decimal Price { get; set; }
         public string ImagePath { get; set; }
+        public DateTime? CreatedDate { get; set; }
+        public string CreatedIpAddress { get; set; }
+        public string CreatedMachineName { get; set; }
+
+
     }
 }
