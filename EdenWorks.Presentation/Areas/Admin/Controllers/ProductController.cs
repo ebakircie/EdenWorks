@@ -22,7 +22,7 @@ namespace EdenWorks.Presentation.Areas.Admin.Controllers
             model.Categories = await _categoryService.GetCategoriesList(); // service e category listesi dönen ama farklı vm le bir sınıf eklendi.
             return View(model);
         }
-
+        
         [HttpPost]
         public async Task<IActionResult> Create(CreateProductDTO model)
         {
@@ -58,14 +58,14 @@ namespace EdenWorks.Presentation.Areas.Admin.Controllers
             {
                 TempData["Success"] = "Product has been added!";
                 await _productService.Update(model);
-                return RedirectToAction("List");
+                return RedirectToAction("List");              
             }
             else
             {
                 TempData["Error"] = "The Product hasn't been updated..!";
                 //return View(model);  hata aldığında, tekrar gidiyor model e fakat, getbyid category getirirken boş getiriyor. update e gidip kendi doldurması lazım.
                 return RedirectToAction("Update");
-            }
+            }         
         }
 
         public async Task<IActionResult> Delete(int id)

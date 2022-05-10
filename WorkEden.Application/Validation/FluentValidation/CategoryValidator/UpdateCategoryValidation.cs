@@ -13,10 +13,8 @@ namespace EdenWorks.Application.Validation.FluentValidation.CategoryValidator
         public UpdateCategoryValidation()
         {
             RuleFor(x => x.CategoryName).NotEmpty()
-                                      .WithMessage("Category name cannot be blank!")
                                       .MinimumLength(2)
-                                      .MaximumLength(50)
-                                      .WithMessage("Minimum 2 and Maximum 50 characters allowed!");
+                                      .MaximumLength(50);
         }
     }
 }
