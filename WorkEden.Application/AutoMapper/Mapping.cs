@@ -1,6 +1,8 @@
 ﻿using AutoMapper;
 using EdenWorks.Application.Models.DTOs.CategoryDTO;
+using EdenWorks.Application.Models.DTOs.EntryDTO;
 using EdenWorks.Application.Models.DTOs.ProductDTO;
+using EdenWorks.Application.Models.VMs;
 using EdenWorks.Application.Models.VMs.CategoryVM;
 using EdenWorks.Application.Models.VMs.ProductVM;
 using EdenWorks.Domain.Entites;
@@ -27,6 +29,12 @@ namespace EdenWorks.Application.AutoMapper
             CreateMap<Product, UpdateProductDTO>().ReverseMap();
             CreateMap<Product, ProductVM>().ReverseMap();
             CreateMap<ProductVM, UpdateProductDTO>().ReverseMap();
+
+            CreateMap<AppUser, RegisterDTO>().ReverseMap();
+            CreateMap<AppUser, LoginDTO>().ReverseMap();
+            CreateMap<AppUser, AppUserVM>().ReverseMap();
+            CreateMap<UpdateProductDTO,AppUserVM>().ReverseMap();
+            
         }
     }
 }

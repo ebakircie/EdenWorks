@@ -2,9 +2,12 @@
 using AutoMapper;
 using EdenWorks.Application.AutoMapper;
 using EdenWorks.Application.Models.DTOs.CategoryDTO;
+using EdenWorks.Application.Models.DTOs.EntryDTO;
 using EdenWorks.Application.Models.DTOs.ProductDTO;
+using EdenWorks.Application.Services.AppUserService;
 using EdenWorks.Application.Services.CategoryService;
 using EdenWorks.Application.Services.ProductService;
+using EdenWorks.Application.Validation.FluentValidation.AppUserValidator;
 using EdenWorks.Application.Validation.FluentValidation.CategoryValidator;
 using EdenWorks.Application.Validation.FluentValidation.ProductValidator;
 using EdenWorks.Domain.Repositories;
@@ -24,6 +27,7 @@ namespace EdenWorks.Application.IoC
 
             builder.RegisterType<CategoryService>().As<ICategoryService>().InstancePerLifetimeScope();
             builder.RegisterType<ProductService>().As<IProductService>().InstancePerLifetimeScope();
+            builder.RegisterType<AppUserService>().As<IAppUserService>().InstancePerLifetimeScope();
 
             #region AutoMapper
             //AutoMapper resolving
@@ -50,6 +54,8 @@ namespace EdenWorks.Application.IoC
             builder.RegisterType<UpdateCategoryValidation>().As<IValidator<UpdateCategoryDTO>>().InstancePerLifetimeScope();
             builder.RegisterType<CreateProductValidation>().As<IValidator<CreateProductDTO>>().InstancePerLifetimeScope();
             builder.RegisterType<UpdateProductValidation>().As<IValidator<UpdateProductDTO>>().InstancePerLifetimeScope();
+            builder.RegisterType<RegisterAppUserValidation>().As<IValidator<RegisterDTO>>().InstancePerLifetimeScope();
+            builder.RegisterType<LoginAppUserValidation>().As<IValidator<LoginDTO>>().InstancePerLifetimeScope();
             #endregion
 
             base.Load(builder);
