@@ -1,11 +1,14 @@
-﻿using EdenWorks.Application.Models.DTOs.CategoryDTO;
+﻿using EdenWorks.Application.Extensions;
+using EdenWorks.Application.Models.DTOs.CategoryDTO;
 using EdenWorks.Application.Services.CategoryService;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 
 namespace EdenWorks.Presentation.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [NeedAuthentication]
     public class CategoryController : Controller
     {
         private readonly ICategoryService _categoryService;

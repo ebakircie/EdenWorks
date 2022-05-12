@@ -1,11 +1,14 @@
-﻿using EdenWorks.Application.Models.DTOs.ProductDTO;
+﻿using EdenWorks.Application.Extensions;
+using EdenWorks.Application.Models.DTOs.ProductDTO;
 using EdenWorks.Application.Services.CategoryService;
 using EdenWorks.Application.Services.ProductService;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EdenWorks.Presentation.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [NeedAuthentication]
     public class ProductController : Controller
     {
         private readonly IProductService _productService;

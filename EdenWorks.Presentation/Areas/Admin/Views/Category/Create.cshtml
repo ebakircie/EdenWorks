@@ -1,7 +1,7 @@
 ﻿@model CreateCategoryDTO
 @{
     ViewData["Title"] = "Create";
-    
+
 }
 
 <div class="row ml-2 mt-2 mr-2">
@@ -18,9 +18,9 @@
                         <span asp-validation-for="CategoryName" class="text-danger"></span>
                     </div>
                 </div>
-                <div class="card-footer">
-                     <input type="submit" class="btn btn-primary btn-sm float-end ms-2 " value="Submit" />
-                    <a asp-action="List" class="btn btn-dark btn-sm  float-end">Back To List</a>
+                <div class="card-footer ">
+                    <input type="submit" class="btn btn-success btn-sm " value="Create" />
+                    <a asp-action="List" class="btn btn-primary btn-sm float-end ms-2 mb-2">Back To List</a>
                 </div>
             </form>
         </div>
