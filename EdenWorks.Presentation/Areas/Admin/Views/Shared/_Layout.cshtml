@@ -8,60 +8,176 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - EdenWorks.Presentation</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/EdenWorks.Presentation.styles.css" asp-append-version="true" />
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <style>
+        a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    @if (SignInManager.IsSignedIn(User))
-                    {
-                        <a class="navbar-brand" asp-area="Admin" asp-controller="Home" asp-action="AdminMain">EdenWorks.Presentation</a>
-
-                        <ul class="navbar-nav flex-grow-1">
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="Admin" asp-controller="Product" asp-action="List">Product</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="Admin" asp-controller="Category" asp-action="List">Category</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="Admin" asp-controller="Account" asp-action="Register">Account</a>
-                            </li>
-                        </ul>
-                        <ul class="navbar-nav d-flex  me-6">
-                            <li class="nav item">
-                                <a class="btn btn-danger " asp-area="Admin" asp-controller="Account" asp-action="Logout">Logout</a>
-                            </li>
-                        </ul>
-                    }
-                   
+    <div class="general">
+        <div class="wrapper">
+            <!-- Sidebar  -->
+            <nav id="sidebar">
+                <div class="sidebar-header">
+                    <h3>Admin Page</h3>
+                    <a class="btn btn-danger btn-sm float-left" asp-area="Admin" asp-controller="Account" asp-action="Logout">Logout</a>
                 </div>
+
+                <ul class="list-unstyled components">
+                    @*  <p>Dummy Heading</p>*@
+                    <li>
+                        <a asp-area="Admin" asp-controller="Home" asp-action="AdminMain">Home</a>
+                    </li>
+                    <li class="active">
+                        <a href="#categorySubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Category</a>
+                        <ul class="collapse list-unstyled" id="categorySubmenu">
+                            <li>
+                                <a asp-area="Admin" asp-controller="Category" asp-action="Create">Create Category</a>
+                            </li>
+                            <li>
+                                <a asp-area="Admin" asp-controller="Category" asp-action="List">Category List</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#productSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Products</a>
+                        <ul class="collapse list-unstyled" id="productSubmenu">
+                            <li>
+                                <a asp-area="Admin" asp-controller="Product" asp-action="Create">Create Product</a>
+                            </li>
+                            <li>
+                                <a asp-area="Admin" asp-controller="Product" asp-action="List">All Products</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a asp-area="Admin" asp-controller="Account" asp-action="Register">Create Account</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
+                </ul>
+
+                
+
+
+            </nav>
+
+            <!-- Page Content  -->
+            <div id="content">
+
+                <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                    <div class="container">
+
+                        <button type="button" id="sidebarCollapse" class="btn btn-info">
+                            <i class="fas fa-align-left"></i>
+                            <span>Toggle Sidebar</span>
+                        </button>
+                        
+
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                     @*       <ul class="nav navbar-nav ml-auto">
+                                <li class="nav-item active">
+                                <a class="nav-link" href="#">Page</a>
+                                </li>
+                                <li class="nav-item">
+                                <a class="nav-link" href="#">Page</a>
+                                </li>
+                                <li class="nav-item">
+                                <a class="nav-link" href="#">Page</a>
+                                </li>
+                                <li class="nav-item">
+                                <a class="nav-link" href="#">Page</a>
+                                </li>
+                                </ul>*@
+                        </div>
+                        <partial name="_Search" />
+                       @* <form asp-area="Admin" asp-controller="Product" asp-action="ProductSearch" class="form-inline">
+                            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-primary my-2 my-sm-0" type="submit">Search</button>
+                        </form>*@
+                    </div>
+                </nav>
+
+
+                <partial name="_NotificationPartial" />
+                @RenderBody()
+
             </div>
-        </nav>
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            <partial name="_NotificationPartial" />
-            @RenderBody()
-        </main>
+        </div>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2022 - EdenWorks.Presentation - @*<a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>*@
+
+
+    @*    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+        @if (SignInManager.IsSignedIn(User))
+        {
+        <a class="navbar-brand" asp-area="Admin" asp-controller="Home" asp-action="AdminMain">EdenWorks.Presentation</a>
+
+        <ul class="navbar-nav flex-grow-1">
+        <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="Admin" asp-controller="Product" asp-action="List">Product</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="Admin" asp-controller="Category" asp-action="List">Category</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="Admin" asp-controller="Account" asp-action="Register">Account</a>
+        </li>
+        </ul>
+        <ul class="navbar-nav d-flex  me-6">
+        <li class="nav item">
+        <a class="btn btn-danger " asp-area="Admin" asp-controller="Account" asp-action="Logout">Logout</a>
+        </li>
+        </ul>
+        }
+
         </div>
-    </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        </div>
+        </nav>
+        </header>
+        <div class="container">
+        <main role="main" class="pb-3">
+        <partial name="_NotificationPartial" />
+        @RenderBody()
+        </main>
+        </div>
+
+        <footer class="border-top footer text-muted">
+        <div class="container">
+        &copy; 2022 - EdenWorks.Presentation - @*<a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+        </footer>*@
+    <script src="~/lib/jquery/dist/jquery.min.js" asp-append-version="true"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js" asp-append-version="true"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <!-- Bootstrap Js CDN -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+            });
+        });
+    </script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

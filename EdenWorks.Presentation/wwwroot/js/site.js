@@ -6,6 +6,6 @@
 $(function () {
     setTimeout(() => {
         $("div.alert.notification").fadeOut()
-    },4000)
+    }, 4000)
 
 })

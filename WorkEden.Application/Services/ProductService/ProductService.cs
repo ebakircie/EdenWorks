@@ -125,6 +125,25 @@ namespace EdenWorks.Application.Services.ProductService
 
             return products;
         }
+        public async Task<List<ProductVM>> GetProductsByName(string name)
+        {
+            var products = await _productRepo.GetFilteredList(
+                select: x => new ProductVM
+                {
+                    Id = x.Id,
+                    Name = x.Name,
+                    Price = x.Price,
+                    Description = x.Description,
+                    ImagePath = x.ImagePath,
+                    CategoryName = x.Category.CategoryName,
+                },
+                where: x => x.Name == name && x.Name.Contains(name),
+                orderBy: x => x.OrderBy(x => x.Name),
+                include: x => x.Include(x => x.Category));
+
+            return products;
+        }
+
 
         public async Task<List<ProductVM>> GetProducts()
         {

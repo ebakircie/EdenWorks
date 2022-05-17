@@ -25,7 +25,7 @@ namespace EdenWorks.Presentation.Areas.Admin.Controllers
             model.Categories = await _categoryService.GetCategoriesList(); // service e category listesi dönen ama farklı vm le bir sınıf eklendi.
             return View(model);
         }
-        
+
         [HttpPost]
         public async Task<IActionResult> Create(CreateProductDTO model)
         {
@@ -55,20 +55,20 @@ namespace EdenWorks.Presentation.Areas.Admin.Controllers
         }
 
         [HttpPost]
-        public async Task< IActionResult> Update(UpdateProductDTO model)
+        public async Task<IActionResult> Update(UpdateProductDTO model)
         {
             if (ModelState.IsValid)
             {
                 TempData["Success"] = "Product has been added!";
                 await _productService.Update(model);
-                return RedirectToAction("List");              
+                return RedirectToAction("List");
             }
             else
             {
                 TempData["Error"] = "The Product hasn't been updated..!";
                 //return View(model);  hata aldığında, tekrar gidiyor model e fakat, getbyid category getirirken boş getiriyor. update e gidip kendi doldurması lazım.
                 return RedirectToAction("Update");
-            }         
+            }
         }
 
         public async Task<IActionResult> Delete(int id)
@@ -85,14 +85,27 @@ namespace EdenWorks.Presentation.Areas.Admin.Controllers
         public async Task<IActionResult> SetActive(int id)
         {
             await _productService.SetActive(id);
-            return RedirectToAction("List");
+            return RedirectToAction("PassiveList");
 
         }
 
-        public async Task<IActionResult > Details(int id)
+        public async Task<IActionResult> Details(int id)
         {
-          var result =  await _productService.GetById(id);
+            var result = await _productService.GetById(id);
             return View(result);
         }
+
+        public async Task<IActionResult> GetProductsByCategory(int id)
+        {
+            var result = await _productService.GetProductsByCategory(id);
+            return View(result);
+        }
+
+        public async Task<IActionResult> ProductSearch (string name)
+        {
+            var result = await _productService.GetProductsByName(name);
+            return View(result);
+        }
+
     }
 }
