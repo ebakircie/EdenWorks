@@ -16,6 +16,7 @@ namespace EdenWorks.Application.Services.ProductService
 
         Task SetActive(int id);
         Task<List<ProductVM>> GetProducts();
+        Task<List<ProductVM>> GetProductsByName(string name);
         Task<List<ProductVM>> GetProductsByCategory(int categoryId);
         Task<List<ProductVM>> GetPassives();
         Task<UpdateProductDTO> GetById(int id);

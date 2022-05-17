@@ -23,6 +23,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Areas\Admin\Models\Components\" />
+    <Folder Include="Areas\Admin\Views\Shared\Components\" />
     <Folder Include="Views\LogIn\" />
     <Folder Include="wwwroot\image\products\" />
   </ItemGroup>

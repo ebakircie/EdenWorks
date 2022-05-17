@@ -1,13 +1,9 @@
 ﻿@model LoginDTO
 @{
-    ViewData["Title"] = "LogIn";
+    Layout = null;
 }
 
-
-
 <!DOCTYPE html>
-
-
 
 <html>
 <head>
@@ -78,3 +74,84 @@
     <script src="~/js/site.js" asp-append-version="true"></script>
 </body>
 </html>
+@*
+@model LoginDTO
+@{
+    ViewData["Title"] = "LogIn";
+}
+
+
+
+<!DOCTYPE html>
+
+
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Log In</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body>
+
+    @*<div class="container mt-5">
+        <div class="row justify-content-center align-items-center">
+        <div class="col-sm-12 col-md-12 col-lg-4">
+        <h1 class="mb-3">Login</h1>
+        <form asp-action="LogIn" asp-route-returnUrl="@ViewData["ReturnUrl"]">
+        <form method="post">
+        <div asp-validation-summary="All" class="trext-danger">
+        </div>
+        <div class="mb-3">
+        <label class="form-label" asp-for="UserName">Username</label>
+        <input type="text" asp-for="UserName" class="form-control" />
+        <span asp-validation-for="UserName" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+        <label class="form-label" asp-for="Password">Password</label>
+        <input type="text" asp-for="Password" class="form-control" />
+        <span asp-validation-for="Password" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+        <button type="submit" class="btn btn-primary">Login</button>
+        </div>
+        </form>
+        </form>
+        </div>
+        </div>
+        </div>
+
+    <div class="container col-sm-4 mt-4">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title">Log In</h4>
+            </div>
+            <form asp-action="LogIn" asp-route-returnUrl="@ViewData["ReturnUrl"]">
+                <div class="card-body">
+                    <div asp-validation-summary="All" class="text-danger"></div>
+                    <div class="form-group">
+                        <label asp-for="UserName">Username</label>
+                        <input asp-for="UserName" class="form-control" />
+                        <span asp-validation-for="UserName" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Password"></label>
+                        <input asp-for="Password" type="password" class="form-control" />
+                        <span asp-validation-for="Password" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <button type="submit" class="btn btn-success">Log In</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+</body>
+</html>*@
