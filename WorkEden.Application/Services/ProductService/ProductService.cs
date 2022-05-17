@@ -137,7 +137,7 @@ namespace EdenWorks.Application.Services.ProductService
                     ImagePath = x.ImagePath,
                     CategoryName = x.Category.CategoryName,
                 },
-                where: x => x.Name == name && x.Name.Contains(name),
+                where: x => x.Name == name || x.Name.Contains(name),
                 orderBy: x => x.OrderBy(x => x.Name),
                 include: x => x.Include(x => x.Category));
 

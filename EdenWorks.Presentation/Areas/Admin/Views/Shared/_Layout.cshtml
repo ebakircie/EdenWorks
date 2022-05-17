@@ -65,26 +65,21 @@
                         <a href="#">Contact</a>
                     </li>
                 </ul>
-
-                
-
-
             </nav>
-
             <!-- Page Content  -->
             <div id="content">
 
-                <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <nav class="navbar navbar-expand-md  navbar-dark bg-dark" style{border-radius: 4px;}>
                     <div class="container">
 
                         <button type="button" id="sidebarCollapse" class="btn btn-info">
                             <i class="fas fa-align-left"></i>
                             <span>Toggle Sidebar</span>
                         </button>
-                        
+
 
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                     @*       <ul class="nav navbar-nav ml-auto">
+                            @*       <ul class="nav navbar-nav ml-auto">
                                 <li class="nav-item active">
                                 <a class="nav-link" href="#">Page</a>
                                 </li>
@@ -99,11 +94,11 @@
                                 </li>
                                 </ul>*@
                         </div>
-                        <partial name="_Search" />
-                       @* <form asp-area="Admin" asp-controller="Product" asp-action="ProductSearch" class="form-inline">
-                            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                            <button class="btn btn-primary my-2 my-sm-0" type="submit">Search</button>
-                        </form>*@
+                        @using (Html.BeginForm("ProductSearch", "Product", FormMethod.Get))
+                        {
+                            @Html.TextBox("Name")
+                            <input type="submit" value="Search">
+                        }
                     </div>
                 </nav>
 

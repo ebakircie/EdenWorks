@@ -103,8 +103,15 @@ namespace EdenWorks.Presentation.Areas.Admin.Controllers
 
         public async Task<IActionResult> ProductSearch (string name)
         {
-            var result = await _productService.GetProductsByName(name);
-            return View(result);
+            if (!string.IsNullOrEmpty(name))
+            {
+                var result = await _productService.GetProductsByName(name);
+                return View(result);
+            }
+            else
+            {
+                return View();
+            }  
         }
 
     }
