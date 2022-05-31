@@ -131,15 +131,17 @@ namespace EdenWorks.Infrastructure.Migrations
                         {
                             Id = 9,
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "e27acd68-a63f-4b9e-b43f-6ad8b739239a",
-                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 830, DateTimeKind.Local).AddTicks(7361),
+                            ConcurrencyStamp = "4717874c-5334-4464-afdf-8599b8732ab8",
+                            CreatedDate = new DateTime(2022, 5, 31, 16, 45, 23, 914, DateTimeKind.Local).AddTicks(6641),
+                            CreatedIpAddress = "192.168.1.241",
+                            CreatedMachineName = "DESKTOP-SCCLTAH",
                             Email = "admin@gmail.com",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
                             NormalizedUserName = "ADMIN",
-                            PasswordHash = "AQAAAAEAACcQAAAAECjbLF7vJk5bQHQIyh7yF9K3yxTdOQODjvILjDDnO4yPi4CmrykFyCfVdfUNBlcB7A==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEO50A63NXZzBeoiT4LmBlD8JJF/aINhAMgLGYoJXZDfpjv030ACstRlPXf5lNg4vXQ==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "cd739253-6bc0-43ab-9cbf-3887a1819f67",
+                            SecurityStamp = "b21d2971-26e6-4544-b641-f3ad74574c79",
                             Status = 1,
                             TwoFactorEnabled = false,
                             UserName = "admin"
@@ -204,7 +206,7 @@ namespace EdenWorks.Infrastructure.Migrations
                         {
                             Id = 1,
                             CategoryName = "SALATALAR / SALADS",
-                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 830, DateTimeKind.Local).AddTicks(8386),
+                            CreatedDate = new DateTime(2022, 5, 31, 16, 45, 23, 915, DateTimeKind.Local).AddTicks(948),
                             CreatedIpAddress = "192.168.1.241",
                             CreatedMachineName = "DESKTOP-SCCLTAH",
                             Status = 1
@@ -213,7 +215,7 @@ namespace EdenWorks.Infrastructure.Migrations
                         {
                             Id = 2,
                             CategoryName = "APERATİFLER / SNACKS",
-                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 831, DateTimeKind.Local).AddTicks(3264),
+                            CreatedDate = new DateTime(2022, 5, 31, 16, 45, 23, 915, DateTimeKind.Local).AddTicks(2979),
                             CreatedIpAddress = "192.168.1.241",
                             CreatedMachineName = "DESKTOP-SCCLTAH",
                             Status = 1
@@ -222,7 +224,7 @@ namespace EdenWorks.Infrastructure.Migrations
                         {
                             Id = 3,
                             CategoryName = "TOSTLAR / TOASTS",
-                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 831, DateTimeKind.Local).AddTicks(5769),
+                            CreatedDate = new DateTime(2022, 5, 31, 16, 45, 23, 915, DateTimeKind.Local).AddTicks(4803),
                             CreatedIpAddress = "192.168.1.241",
                             CreatedMachineName = "DESKTOP-SCCLTAH",
                             Status = 1
@@ -231,7 +233,7 @@ namespace EdenWorks.Infrastructure.Migrations
                         {
                             Id = 4,
                             CategoryName = "BURGERLER / BURGERS",
-                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 831, DateTimeKind.Local).AddTicks(9781),
+                            CreatedDate = new DateTime(2022, 5, 31, 16, 45, 23, 915, DateTimeKind.Local).AddTicks(6597),
                             CreatedIpAddress = "192.168.1.241",
                             CreatedMachineName = "DESKTOP-SCCLTAH",
                             Status = 1
@@ -240,7 +242,7 @@ namespace EdenWorks.Infrastructure.Migrations
                         {
                             Id = 5,
                             CategoryName = "PİDELER / PIDES",
-                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 832, DateTimeKind.Local).AddTicks(3135),
+                            CreatedDate = new DateTime(2022, 5, 31, 16, 45, 23, 915, DateTimeKind.Local).AddTicks(8377),
                             CreatedIpAddress = "192.168.1.241",
                             CreatedMachineName = "DESKTOP-SCCLTAH",
                             Status = 1
@@ -249,7 +251,7 @@ namespace EdenWorks.Infrastructure.Migrations
                         {
                             Id = 6,
                             CategoryName = "PİZZALAR / PIZZAS",
-                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 832, DateTimeKind.Local).AddTicks(8037),
+                            CreatedDate = new DateTime(2022, 5, 31, 16, 45, 23, 916, DateTimeKind.Local).AddTicks(125),
                             CreatedIpAddress = "192.168.1.241",
                             CreatedMachineName = "DESKTOP-SCCLTAH",
                             Status = 1
@@ -258,7 +260,7 @@ namespace EdenWorks.Infrastructure.Migrations
                         {
                             Id = 7,
                             CategoryName = "QUESADILLAS & WRAPS",
-                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 833, DateTimeKind.Local).AddTicks(152),
+                            CreatedDate = new DateTime(2022, 5, 31, 16, 45, 23, 916, DateTimeKind.Local).AddTicks(1878),
                             CreatedIpAddress = "192.168.1.241",
                             CreatedMachineName = "DESKTOP-SCCLTAH",
                             Status = 1
@@ -267,7 +269,7 @@ namespace EdenWorks.Infrastructure.Migrations
                         {
                             Id = 8,
                             CategoryName = "MEZELER / MEZZES",
-                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 833, DateTimeKind.Local).AddTicks(2397),
+                            CreatedDate = new DateTime(2022, 5, 31, 16, 45, 23, 916, DateTimeKind.Local).AddTicks(3664),
                             CreatedIpAddress = "192.168.1.241",
                             CreatedMachineName = "DESKTOP-SCCLTAH",
                             Status = 1
@@ -276,7 +278,7 @@ namespace EdenWorks.Infrastructure.Migrations
                         {
                             Id = 9,
                             CategoryName = "IZGARALAR / GRILLS",
-                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 833, DateTimeKind.Local).AddTicks(4502),
+                            CreatedDate = new DateTime(2022, 5, 31, 16, 45, 23, 916, DateTimeKind.Local).AddTicks(7225),
                             CreatedIpAddress = "192.168.1.241",
                             CreatedMachineName = "DESKTOP-SCCLTAH",
                             Status = 1
@@ -285,7 +287,7 @@ namespace EdenWorks.Infrastructure.Migrations
                         {
                             Id = 10,
                             CategoryName = "MAKARNALAR / PASTAS",
-                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 833, DateTimeKind.Local).AddTicks(7694),
+                            CreatedDate = new DateTime(2022, 5, 31, 16, 45, 23, 917, DateTimeKind.Local).AddTicks(2),
                             CreatedIpAddress = "192.168.1.241",
                             CreatedMachineName = "DESKTOP-SCCLTAH",
                             Status = 1
@@ -294,7 +296,7 @@ namespace EdenWorks.Infrastructure.Migrations
                         {
                             Id = 11,
                             CategoryName = "KAHVELER / COFFEES",
-                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 833, DateTimeKind.Local).AddTicks(9711),
+                            CreatedDate = new DateTime(2022, 5, 31, 16, 45, 23, 917, DateTimeKind.Local).AddTicks(4333),
                             CreatedIpAddress = "192.168.1.241",
                             CreatedMachineName = "DESKTOP-SCCLTAH",
                             Status = 1
@@ -303,7 +305,7 @@ namespace EdenWorks.Infrastructure.Migrations
                         {
                             Id = 12,
                             CategoryName = "SOFT DRINKS",
-                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 834, DateTimeKind.Local).AddTicks(1632),
+                            CreatedDate = new DateTime(2022, 5, 31, 16, 45, 23, 917, DateTimeKind.Local).AddTicks(7461),
                             CreatedIpAddress = "192.168.1.241",
                             CreatedMachineName = "DESKTOP-SCCLTAH",
                             Status = 1
@@ -312,7 +314,7 @@ namespace EdenWorks.Infrastructure.Migrations
                         {
                             Id = 13,
                             CategoryName = "BİRALAR / BEERS",
-                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 834, DateTimeKind.Local).AddTicks(4042),
+                            CreatedDate = new DateTime(2022, 5, 31, 16, 45, 23, 918, DateTimeKind.Local).AddTicks(3182),
                             CreatedIpAddress = "192.168.1.241",
                             CreatedMachineName = "DESKTOP-SCCLTAH",
                             Status = 1
@@ -321,7 +323,7 @@ namespace EdenWorks.Infrastructure.Migrations
                         {
                             Id = 14,
                             CategoryName = "RAKILAR / RAKI",
-                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 834, DateTimeKind.Local).AddTicks(6069),
+                            CreatedDate = new DateTime(2022, 5, 31, 16, 45, 23, 918, DateTimeKind.Local).AddTicks(5388),
                             CreatedIpAddress = "192.168.1.241",
                             CreatedMachineName = "DESKTOP-SCCLTAH",
                             Status = 1
@@ -330,7 +332,7 @@ namespace EdenWorks.Infrastructure.Migrations
                         {
                             Id = 15,
                             CategoryName = "ŞARAPLAR / VINES",
-                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 834, DateTimeKind.Local).AddTicks(8054),
+                            CreatedDate = new DateTime(2022, 5, 31, 16, 45, 23, 918, DateTimeKind.Local).AddTicks(7422),
                             CreatedIpAddress = "192.168.1.241",
                             CreatedMachineName = "DESKTOP-SCCLTAH",
                             Status = 1
@@ -339,7 +341,7 @@ namespace EdenWorks.Infrastructure.Migrations
                         {
                             Id = 16,
                             CategoryName = "DİĞER İÇKİLER / HARD LIQUORS",
-                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 835, DateTimeKind.Local).AddTicks(5491),
+                            CreatedDate = new DateTime(2022, 5, 31, 16, 45, 23, 918, DateTimeKind.Local).AddTicks(9315),
                             CreatedIpAddress = "192.168.1.241",
                             CreatedMachineName = "DESKTOP-SCCLTAH",
                             Status = 1
@@ -419,7 +421,7 @@ namespace EdenWorks.Infrastructure.Migrations
                         {
                             Id = 1,
                             CategoryId = 1,
-                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 836, DateTimeKind.Local).AddTicks(4742),
+                            CreatedDate = new DateTime(2022, 5, 31, 16, 45, 23, 919, DateTimeKind.Local).AddTicks(1756),
                             CreatedIpAddress = "192.168.1.241",
                             CreatedMachineName = "DESKTOP-SCCLTAH",
                             Description = "Kırmızı lahana, havuç, yeşil zeytin, mısır, cherry domates ve taze mevsim yeşillikleri ile servis edilir. / Contains red cabbage, carrot, green olive, corn, tomato and seasonal fresh ingredients.",
@@ -432,7 +434,7 @@ namespace EdenWorks.Infrastructure.Migrations
                         {
                             Id = 2,
                             CategoryId = 1,
-                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 836, DateTimeKind.Local).AddTicks(8211),
+                            CreatedDate = new DateTime(2022, 5, 31, 16, 45, 23, 919, DateTimeKind.Local).AddTicks(3618),
                             CreatedIpAddress = "192.168.1.241",
                             CreatedMachineName = "DESKTOP-SCCLTAH",
                             Description = "Izg. tavuk, domates, salatalık, kornişon turşu ve karışık taze yeşillik ile servis edilir. / Contains grilled chicken, tomato, cucumber, pickle and seasonal fresh ingredients.",
@@ -445,7 +447,7 @@ namespace EdenWorks.Infrastructure.Migrations
                         {
                             Id = 3,
                             CategoryId = 1,
-                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 837, DateTimeKind.Local).AddTicks(211),
+                            CreatedDate = new DateTime(2022, 5, 31, 16, 45, 23, 919, DateTimeKind.Local).AddTicks(5568),
                             CreatedIpAddress = "192.168.1.241",
                             CreatedMachineName = "DESKTOP-SCCLTAH",
                             Description = "Ton balığı, dilim siyah zeytin, dilim yeşil zeytin, mısır, domates, salatalık, soğan, kornişon turşu ve karışk taze yeşillikler ile servis edilir / Contains tuna, black and green olive, corn, tomato, cucumber, onion, pickle and seasonal fresh ingredients.",
@@ -458,7 +460,7 @@ namespace EdenWorks.Infrastructure.Migrations
                         {
                             Id = 4,
                             CategoryId = 1,
-                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 837, DateTimeKind.Local).AddTicks(2128),
+                            CreatedDate = new DateTime(2022, 5, 31, 16, 45, 23, 919, DateTimeKind.Local).AddTicks(7417),
                             CreatedIpAddress = "192.168.1.241",
                             CreatedMachineName = "DESKTOP-SCCLTAH",
                             Description = "Izgarada kızartılmış hellim peyniri, domates, salatalık, yeşil biber ve karışık taze yeşillikler ile servis edilir / Contains grilled halomi cheese, tomato, cucumber, green pepper and seasonal fresh ingredients.",
@@ -470,7 +472,7 @@ namespace EdenWorks.Infrastructure.Migrations
                         {
                             Id = 5,
                             CategoryId = 2,
-                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 837, DateTimeKind.Local).AddTicks(4150),
+                            CreatedDate = new DateTime(2022, 5, 31, 16, 45, 23, 919, DateTimeKind.Local).AddTicks(9197),
                             CreatedIpAddress = "192.168.1.241",
                             CreatedMachineName = "DESKTOP-SCCLTAH",
                             Description = "Patates, Patlıcan, papya Biber, Kavrulmuş kuru acı biber ve Şanmsaklı süzme yoğurt ile servis edilir / Contains Fried potato, eggplant, capia pepper, hot dry pepper and yoghurt with garlic.",
@@ -482,7 +484,7 @@ namespace EdenWorks.Infrastructure.Migrations
                         {
                             Id = 6,
                             CategoryId = 2,
-                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 837, DateTimeKind.Local).AddTicks(6041),
+                            CreatedDate = new DateTime(2022, 5, 31, 16, 45, 23, 931, DateTimeKind.Local).AddTicks(3564),
                             CreatedIpAddress = "192.168.1.241",
                             CreatedMachineName = "DESKTOP-SCCLTAH",
                             Description = "Parmak dilim patates, sosis, soğan halkaları kizartılarak servis edilir / Roasting Of potato, sausage and onion rings.",
@@ -495,7 +497,7 @@ namespace EdenWorks.Infrastructure.Migrations
                         {
                             Id = 7,
                             CategoryId = 2,
-                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 837, DateTimeKind.Local).AddTicks(7876),
+                            CreatedDate = new DateTime(2022, 5, 31, 16, 45, 23, 931, DateTimeKind.Local).AddTicks(6821),
                             CreatedIpAddress = "192.168.1.241",
                             CreatedMachineName = "DESKTOP-SCCLTAH",
                             Description = "200 Gr tavuk göğsü içinde, jambon içerisine sarılmış tel peynir ile galeta ununda kızartılarak, patates kızartması ile servis edilir / Contains 200Gr chickhen breast and beef jam rolled up with cheese inside of it, fried in oil with french fries.",
@@ -508,7 +510,7 @@ namespace EdenWorks.Infrastructure.Migrations
                         {
                             Id = 8,
                             CategoryId = 2,
-                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 837, DateTimeKind.Local).AddTicks(9700),
+                            CreatedDate = new DateTime(2022, 5, 31, 16, 45, 23, 931, DateTimeKind.Local).AddTicks(8772),
                             CreatedIpAddress = "192.168.1.241",
                             CreatedMachineName = "DESKTOP-SCCLTAH",
                             Description = "Balık fileto, karides, mantar, kaşar peyniri, sarımsak, maydanoz, galeta unu ve baharatlar ile servis edilir / Contains fillet fish, shrimp, mushroom, cheese, garlic, parsley, bread crumbs with spices.",
@@ -520,7 +522,7 @@ namespace EdenWorks.Infrastructure.Migrations
                         {
                             Id = 9,
                             CategoryId = 2,
-                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 838, DateTimeKind.Local).AddTicks(1855),
+                            CreatedDate = new DateTime(2022, 5, 31, 16, 45, 23, 932, DateTimeKind.Local).AddTicks(652),
                             CreatedIpAddress = "192.168.1.241",
                             CreatedMachineName = "DESKTOP-SCCLTAH",
                             Description = "Galeta ununda kızartılmış Mezgit fileto, ev yapımı kızartılmış patates ile servis edilir / Contains fried North Atlantic whiting with french fries.",
@@ -532,7 +534,7 @@ namespace EdenWorks.Infrastructure.Migrations
                         {
                             Id = 10,
                             CategoryId = 3,
-                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 838, DateTimeKind.Local).AddTicks(3721),
+                            CreatedDate = new DateTime(2022, 5, 31, 16, 45, 23, 932, DateTimeKind.Local).AddTicks(2475),
                             CreatedIpAddress = "192.168.1.241",
                             CreatedMachineName = "DESKTOP-SCCLTAH",
                             Description = "Kepek ekmeğinde kaşar pey. ve köz. domates yanında yeşil ve siyah zeytin ile servis edilir / Contains cheese and tomato inside of bran bread with green and black olive.",
@@ -544,7 +546,7 @@ namespace EdenWorks.Infrastructure.Migrations
                         {
                             Id = 11,
                             CategoryId = 3,
-                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 838, DateTimeKind.Local).AddTicks(6199),
+                            CreatedDate = new DateTime(2022, 5, 31, 16, 45, 23, 932, DateTimeKind.Local).AddTicks(4260),
                             CreatedIpAddress = "192.168.1.241",
                             CreatedMachineName = "DESKTOP-SCCLTAH",
                             Description = "Bazlama ekmeğinde kasap syucuğu ve Kaşar peyniri yanında patates kızartması ile servis edilir / Contains sausage with cheese with french fries.",
@@ -557,7 +559,7 @@ namespace EdenWorks.Infrastructure.Migrations
                         {
                             Id = 12,
                             CategoryId = 3,
-                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 838, DateTimeKind.Local).AddTicks(8869),
+                            CreatedDate = new DateTime(2022, 5, 31, 16, 45, 23, 932, DateTimeKind.Local).AddTicks(6058),
                             CreatedIpAddress = "192.168.1.241",
                             CreatedMachineName = "DESKTOP-SCCLTAH",
                             Description = "Bazlama ekmeğinde Ezine Peyniri, Kaşar peyniri, İzmir tulum ve Tel peyniri yanında patates kızartması ile servis edilir / Contains mixture of 4 different type of cheese with french fries.",
@@ -570,7 +572,7 @@ namespace EdenWorks.Infrastructure.Migrations
                         {
                             Id = 13,
                             CategoryId = 3,
-                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 839, DateTimeKind.Local).AddTicks(1296),
+                            CreatedDate = new DateTime(2022, 5, 31, 16, 45, 23, 932, DateTimeKind.Local).AddTicks(7818),
                             CreatedIpAddress = "192.168.1.241",
                             CreatedMachineName = "DESKTOP-SCCLTAH",
                             Description = "Bazlama ekmeğinde kaşar peyniri, tel peyniri, kasap sucuğu, közlenmiş domates, biber ve turşu yanında patates kızartması ile servis edilir / Contains sausage, cheese, roasted tomato, pepper and pickle with french fries.",
@@ -582,7 +584,7 @@ namespace EdenWorks.Infrastructure.Migrations
                         {
                             Id = 14,
                             CategoryId = 4,
-                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 839, DateTimeKind.Local).AddTicks(3148),
+                            CreatedDate = new DateTime(2022, 5, 31, 16, 45, 23, 932, DateTimeKind.Local).AddTicks(9552),
                             CreatedIpAddress = "192.168.1.241",
                             CreatedMachineName = "DESKTOP-SCCLTAH",
                             Description = "180 gr ev yapımı köfte, karamelize soğan, közlenmiş domates, barbekü sos, turşu ve patates kızartması ile servis edilir / Contains 180 gr handmate meatball, caramelized onion, roasted tomato, barbeque sauce and pickle with french fries.",
@@ -595,7 +597,7 @@ namespace EdenWorks.Infrastructure.Migrations
                         {
                             Id = 15,
                             CategoryId = 4,
-                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 839, DateTimeKind.Local).AddTicks(7381),
+                            CreatedDate = new DateTime(2022, 5, 31, 16, 45, 23, 933, DateTimeKind.Local).AddTicks(1282),
                             CreatedIpAddress = "192.168.1.241",
                             CreatedMachineName = "DESKTOP-SCCLTAH",
                             Description = "180 gr ev yapımı köfte, karamelize soğan, közlenmiş domates, turşu, barbekü sos, cheddar peynir ve patates kızartması ile servis edilir / Contains 180 gr handmade meatball, caramelized onion, roasted tomato, barbeque sauce, chedddar and pickle with french fries.",
@@ -608,7 +610,7 @@ namespace EdenWorks.Infrastructure.Migrations
                         {
                             Id = 16,
                             CategoryId = 5,
-                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 839, DateTimeKind.Local).AddTicks(9825),
+                            CreatedDate = new DateTime(2022, 5, 31, 16, 45, 23, 933, DateTimeKind.Local).AddTicks(3016),
                             CreatedIpAddress = "192.168.1.241",
                             CreatedMachineName = "DESKTOP-SCCLTAH",
                             Description = "İnce hamur, dana kıyma, mevsim yeşillikleri eklenerek servis edilir / Contains thin pide dough, mince, with seasonal fresh ingredients.",
@@ -620,7 +622,7 @@ namespace EdenWorks.Infrastructure.Migrations
                         {
                             Id = 17,
                             CategoryId = 5,
-                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 840, DateTimeKind.Local).AddTicks(3848),
+                            CreatedDate = new DateTime(2022, 5, 31, 16, 45, 23, 933, DateTimeKind.Local).AddTicks(4735),
                             CreatedIpAddress = "192.168.1.241",
                             CreatedMachineName = "DESKTOP-SCCLTAH",
                             Description = "İnce pide hamuru, İzmir tulum, Kaşar, Ezine ve Tel peyniri ile servis edilir / Contains thin pide dough, 4 different type of cheese.",
@@ -632,7 +634,7 @@ namespace EdenWorks.Infrastructure.Migrations
                         {
                             Id = 18,
                             CategoryId = 5,
-                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 840, DateTimeKind.Local).AddTicks(7369),
+                            CreatedDate = new DateTime(2022, 5, 31, 16, 45, 23, 943, DateTimeKind.Local).AddTicks(3250),
                             CreatedIpAddress = "192.168.1.241",
                             CreatedMachineName = "DESKTOP-SCCLTAH",
                             Description = "İnce pide hamuru, dana kıyma, mevsim yeşillikleri eklenerek servis edilir / Contains thin pide dough, mince with seasonal fresh ingredients.",
@@ -645,7 +647,7 @@ namespace EdenWorks.Infrastructure.Migrations
                         {
                             Id = 19,
                             CategoryId = 5,
-                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 840, DateTimeKind.Local).AddTicks(9442),
+                            CreatedDate = new DateTime(2022, 5, 31, 16, 45, 23, 943, DateTimeKind.Local).AddTicks(5693),
                             CreatedIpAddress = "192.168.1.241",
                             CreatedMachineName = "DESKTOP-SCCLTAH",
                             Description = "İnce pide hamuru, kasap sucuk ve kaşar peyniri ile servis edilir / Contains thin pide dough, fermented sausage with cheese.",
@@ -658,7 +660,7 @@ namespace EdenWorks.Infrastructure.Migrations
                         {
                             Id = 20,
                             CategoryId = 5,
-                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 841, DateTimeKind.Local).AddTicks(1328),
+                            CreatedDate = new DateTime(2022, 5, 31, 16, 45, 23, 943, DateTimeKind.Local).AddTicks(7676),
                             CreatedIpAddress = "192.168.1.241",
                             CreatedMachineName = "DESKTOP-SCCLTAH",
                             Description = "Pide Hamuru, Dana kuşbaşı ve Kaşar peyniri ile servis edilir / Contains thin pide dough, meat with cheese.",
@@ -671,7 +673,7 @@ namespace EdenWorks.Infrastructure.Migrations
                         {
                             Id = 21,
                             CategoryId = 6,
-                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 841, DateTimeKind.Local).AddTicks(3436),
+                            CreatedDate = new DateTime(2022, 5, 31, 16, 45, 23, 944, DateTimeKind.Local).AddTicks(180),
                             CreatedIpAddress = "192.168.1.241",
                             CreatedMachineName = "DESKTOP-SCCLTAH",
                             Description = "Pizza hamuru, Mozzarella peyniri, domates, siyah zeytin, mantar, mısır ile servis edilir / Pizza dough contains Mozzarella , tomato, black olive, mushroom and corn.",
@@ -683,7 +685,7 @@ namespace EdenWorks.Infrastructure.Migrations
                         {
                             Id = 22,
                             CategoryId = 6,
-                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 841, DateTimeKind.Local).AddTicks(5356),
+                            CreatedDate = new DateTime(2022, 5, 31, 16, 45, 23, 944, DateTimeKind.Local).AddTicks(9784),
                             CreatedIpAddress = "192.168.1.241",
                             CreatedMachineName = "DESKTOP-SCCLTAH",
                             Description = "Pizza hamuru, Mozzarella peyniri, ton balığı, siyah zeytin, yeşil zeytin, mısır ve kekik ile servis edilir / Pizza dough contains Mozzarella, tuna, black and green olive, corn with thyme.",
@@ -695,7 +697,7 @@ namespace EdenWorks.Infrastructure.Migrations
                         {
                             Id = 23,
                             CategoryId = 6,
-                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 841, DateTimeKind.Local).AddTicks(7198),
+                            CreatedDate = new DateTime(2022, 5, 31, 16, 45, 23, 945, DateTimeKind.Local).AddTicks(2460),
                             CreatedIpAddress = "192.168.1.241",
                             CreatedMachineName = "DESKTOP-SCCLTAH",
                             Description = "Pizza hamuru, Mozzarella peyniri, kasap sucuk, sosis, domates,mısır, siyah zeytin, yeşil zeytin ve mantar ile servis edilir / Pizza dough contains Mozzarella, corn, tomato, black olive, green olive and mushroom.",
@@ -708,7 +710,7 @@ namespace EdenWorks.Infrastructure.Migrations
                         {
                             Id = 24,
                             CategoryId = 7,
-                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 841, DateTimeKind.Local).AddTicks(9303),
+                            CreatedDate = new DateTime(2022, 5, 31, 16, 45, 23, 945, DateTimeKind.Local).AddTicks(4419),
                             CreatedIpAddress = "192.168.1.241",
                             CreatedMachineName = "DESKTOP-SCCLTAH",
                             Description = "Tortilla ekmeği, tavuk eti, yeşil biber, kırmızı biber, domates, soğan, peynir, baharatlar ve cips ile servis edilir / Contains tortilla bread, beef, green pepper, red pepper, tomato, onion, cheese, species and french fries.",
@@ -721,7 +723,7 @@ namespace EdenWorks.Infrastructure.Migrations
                         {
                             Id = 25,
                             CategoryId = 7,
-                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 842, DateTimeKind.Local).AddTicks(1543),
+                            CreatedDate = new DateTime(2022, 5, 31, 16, 45, 23, 945, DateTimeKind.Local).AddTicks(6860),
                             CreatedIpAddress = "192.168.1.241",
                             CreatedMachineName = "DESKTOP-SCCLTAH",
                             Description = "Tortilla ekmeği, dana eti, yeşil biber, kırmızı biber, domates, soğan, peynir, baharatlar ve cips ile servis edilir / Contains tortilla bread, beef, green pepper, red pepper, tomato, onion, cheese, species and french fries.",
@@ -734,7 +736,7 @@ namespace EdenWorks.Infrastructure.Migrations
                         {
                             Id = 26,
                             CategoryId = 7,
-                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 842, DateTimeKind.Local).AddTicks(3983),
+                            CreatedDate = new DateTime(2022, 5, 31, 16, 45, 23, 945, DateTimeKind.Local).AddTicks(8730),
                             CreatedIpAddress = "192.168.1.241",
                             CreatedMachineName = "DESKTOP-SCCLTAH",
                             Description = "Tortilla ekmeği, balık, yeşil biber, kırmızı biber, domates, soğan, peynir, baharatlar, limon ve cips ile servis edilir / Contains tortilla bread, beef, green pepper, red pepper, tomato, onion, cheese, spices, lemoın and french fries",
@@ -746,7 +748,7 @@ namespace EdenWorks.Infrastructure.Migrations
                         {
                             Id = 27,
                             CategoryId = 8,
-                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 842, DateTimeKind.Local).AddTicks(5899),
+                            CreatedDate = new DateTime(2022, 5, 31, 16, 45, 23, 946, DateTimeKind.Local).AddTicks(523),
                             CreatedIpAddress = "192.168.1.241",
                             CreatedMachineName = "DESKTOP-SCCLTAH",
                             Description = "Ezine peyniri, ceviz içi, sarımsak, sızma zeytinyağı, maydanoz, kekik ve pul biber ile servis edilir / Contains Ezine cheese, walnut, garlic, olive oil, parsley, thyme and chili pepper.",
@@ -759,7 +761,7 @@ namespace EdenWorks.Infrastructure.Migrations
                         {
                             Id = 28,
                             CategoryId = 8,
-                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 842, DateTimeKind.Local).AddTicks(7761),
+                            CreatedDate = new DateTime(2022, 5, 31, 16, 45, 23, 946, DateTimeKind.Local).AddTicks(2331),
                             CreatedIpAddress = "192.168.1.241",
                             CreatedMachineName = "DESKTOP-SCCLTAH",
                             Description = "Tereyağında kavrulmuş acı kuru biber, pul biber, süzme yoğurt ile servis edilir / contains roasted hot dry pepper in butter, chili pepper and yoghurt.",
@@ -772,7 +774,7 @@ namespace EdenWorks.Infrastructure.Migrations
                         {
                             Id = 29,
                             CategoryId = 8,
-                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 842, DateTimeKind.Local).AddTicks(9607),
+                            CreatedDate = new DateTime(2022, 5, 31, 16, 45, 23, 946, DateTimeKind.Local).AddTicks(4137),
                             CreatedIpAddress = "192.168.1.241",
                             CreatedMachineName = "DESKTOP-SCCLTAH",
                             Description = "Közlenmiş patlıcan, süzme yoğurt, sarımsak ve zeytinyağı ile servis edilir / Contains roasted eggplant, yoghurt, garlic and olive oil.",
@@ -784,7 +786,7 @@ namespace EdenWorks.Infrastructure.Migrations
                         {
                             Id = 30,
                             CategoryId = 8,
-                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 843, DateTimeKind.Local).AddTicks(1427),
+                            CreatedDate = new DateTime(2022, 5, 31, 16, 45, 23, 946, DateTimeKind.Local).AddTicks(6397),
                             CreatedIpAddress = "192.168.1.241",
                             CreatedMachineName = "DESKTOP-SCCLTAH",
                             Description = "Ezine peyniri, tel peyniri, közlenmiş hellim peyniri, tulum peyniri, domates ve roka ile servis edilir / Contains mixture of 4 different type of cheese served with rocket.",
@@ -797,7 +799,7 @@ namespace EdenWorks.Infrastructure.Migrations
                         {
                             Id = 31,
                             CategoryId = 8,
-                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 843, DateTimeKind.Local).AddTicks(3230),
+                            CreatedDate = new DateTime(2022, 5, 31, 16, 45, 23, 946, DateTimeKind.Local).AddTicks(8168),
                             CreatedIpAddress = "192.168.1.241",
                             CreatedMachineName = "DESKTOP-SCCLTAH",
                             Description = "Karides, sivri biber, tereyağ, sarımsak, domates, mantar, kaşar peyniri, tuz ve kekik ile servis edilir / Contains shrimp, pointed pepper, butter, garlic, tomato, mushroom, cheese, salt and thyme",
@@ -809,7 +811,7 @@ namespace EdenWorks.Infrastructure.Migrations
                         {
                             Id = 32,
                             CategoryId = 8,
-                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 843, DateTimeKind.Local).AddTicks(6150),
+                            CreatedDate = new DateTime(2022, 5, 31, 16, 45, 23, 946, DateTimeKind.Local).AddTicks(9966),
                             CreatedIpAddress = "192.168.1.241",
                             CreatedMachineName = "DESKTOP-SCCLTAH",
                             Description = "Özel ununda kızartılmış Kalamar, sos, limon ve roka ile servis edilir / Contains Fried Calamari, served with special sauce, lemon and arugula.",
@@ -821,7 +823,7 @@ namespace EdenWorks.Infrastructure.Migrations
                         {
                             Id = 33,
                             CategoryId = 9,
-                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 843, DateTimeKind.Local).AddTicks(8417),
+                            CreatedDate = new DateTime(2022, 5, 31, 16, 45, 23, 947, DateTimeKind.Local).AddTicks(1734),
                             CreatedIpAddress = "192.168.1.241",
                             CreatedMachineName = "DESKTOP-SCCLTAH",
                             Description = "Marine edilmiş kemiksiz tavuk but, közlenmiş domates, barbekü sosu ve patates kızartması ile servis edilir / Contains marinated chicked, roasted tomato with barbeque sauce and french fries.",
@@ -833,7 +835,7 @@ namespace EdenWorks.Infrastructure.Migrations
                         {
                             Id = 34,
                             CategoryId = 9,
-                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 844, DateTimeKind.Local).AddTicks(334),
+                            CreatedDate = new DateTime(2022, 5, 31, 16, 45, 23, 947, DateTimeKind.Local).AddTicks(3483),
                             CreatedIpAddress = "192.168.1.241",
                             CreatedMachineName = "DESKTOP-SCCLTAH",
                             Description = "200 gr. ev yapımı köfte, közlenmiş domates, biber, karamelize soğan ve patates kızartması ile servis edilir / Contains 200 gr handmade meatballs, roasted tomato, pepper, caramelized onion with french fries.",
@@ -845,7 +847,7 @@ namespace EdenWorks.Infrastructure.Migrations
                         {
                             Id = 35,
                             CategoryId = 9,
-                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 844, DateTimeKind.Local).AddTicks(2201),
+                            CreatedDate = new DateTime(2022, 5, 31, 16, 45, 23, 947, DateTimeKind.Local).AddTicks(5239),
                             CreatedIpAddress = "192.168.1.241",
                             CreatedMachineName = "DESKTOP-SCCLTAH",
                             Description = "200 gr. özel yapım köfte, yoğurt, yeşil biber, kuru kırmızı biber, domates, tereyağ ve tuz ile servis edilir / Contains 200 gr special meatballs, yoghurt, green pepper, dry red pepper, tomato, butter and salt. ",
@@ -857,7 +859,7 @@ namespace EdenWorks.Infrastructure.Migrations
                         {
                             Id = 36,
                             CategoryId = 9,
-                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 844, DateTimeKind.Local).AddTicks(4043),
+                            CreatedDate = new DateTime(2022, 5, 31, 16, 45, 23, 947, DateTimeKind.Local).AddTicks(6945),
                             CreatedIpAddress = "192.168.1.241",
                             CreatedMachineName = "DESKTOP-SCCLTAH",
                             Description = "200 gr. marine edilmiş Kuzey Atlantik mezgiti, soğan, cherry domates, roka ve kızarmış limon ile servis edilir / Contains 200 gr marin North Atlantic whiting, onion, cherry tomato, arugula and grilled lemon",
@@ -869,7 +871,7 @@ namespace EdenWorks.Infrastructure.Migrations
                         {
                             Id = 37,
                             CategoryId = 9,
-                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 844, DateTimeKind.Local).AddTicks(5904),
+                            CreatedDate = new DateTime(2022, 5, 31, 16, 45, 23, 947, DateTimeKind.Local).AddTicks(8668),
                             CreatedIpAddress = "192.168.1.241",
                             CreatedMachineName = "DESKTOP-SCCLTAH",
                             Description = "200 gr Kuzu eti, karamelize soğan, közlenmiş biber, domates ve cips ile servis edilir / Contains 200 gr slim sliced lamb, caramelized onion, roasted pepper, tomato with french fries.",
@@ -881,7 +883,7 @@ namespace EdenWorks.Infrastructure.Migrations
                         {
                             Id = 38,
                             CategoryId = 10,
-                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 844, DateTimeKind.Local).AddTicks(7814),
+                            CreatedDate = new DateTime(2022, 5, 31, 16, 45, 23, 948, DateTimeKind.Local).AddTicks(381),
                             CreatedIpAddress = "192.168.1.241",
                             CreatedMachineName = "DESKTOP-SCCLTAH",
                             Description = "Bolonez sos, kıyma, doamtes ve sarımsak ile servis edilir / Contains bolognese sauce, mince, tomato and garlic",
@@ -893,7 +895,7 @@ namespace EdenWorks.Infrastructure.Migrations
                         {
                             Id = 39,
                             CategoryId = 10,
-                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 844, DateTimeKind.Local).AddTicks(9913),
+                            CreatedDate = new DateTime(2022, 5, 31, 16, 45, 23, 948, DateTimeKind.Local).AddTicks(2081),
                             CreatedIpAddress = "192.168.1.241",
                             CreatedMachineName = "DESKTOP-SCCLTAH",
                             Description = "Krema, köri sos, peynir ve mantar ile servis edilir / Contains curry sauce, cheese, mushroom and cream.",
@@ -905,7 +907,7 @@ namespace EdenWorks.Infrastructure.Migrations
                         {
                             Id = 40,
                             CategoryId = 10,
-                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 845, DateTimeKind.Local).AddTicks(1848),
+                            CreatedDate = new DateTime(2022, 5, 31, 16, 45, 23, 948, DateTimeKind.Local).AddTicks(3780),
                             CreatedIpAddress = "192.168.1.241",
                             CreatedMachineName = "DESKTOP-SCCLTAH",
                             Description = "Fettucini makarna, krema, tereyağ, mantar, tavuk göğsü, sarımsak, fesleğen, peynir, karabiber ve tuz ile servis edilir / Fettucine, heavy cream, butter, mushroom, chicken breast, garlic, basil, cheese, salt and pepper.",
@@ -917,7 +919,7 @@ namespace EdenWorks.Infrastructure.Migrations
                         {
                             Id = 41,
                             CategoryId = 11,
-                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 845, DateTimeKind.Local).AddTicks(3779),
+                            CreatedDate = new DateTime(2022, 5, 31, 16, 45, 23, 948, DateTimeKind.Local).AddTicks(6017),
                             CreatedIpAddress = "192.168.1.241",
                             CreatedMachineName = "DESKTOP-SCCLTAH",
                             Description = "",
@@ -929,7 +931,7 @@ namespace EdenWorks.Infrastructure.Migrations
                         {
                             Id = 42,
                             CategoryId = 11,
-                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 845, DateTimeKind.Local).AddTicks(5968),
+                            CreatedDate = new DateTime(2022, 5, 31, 16, 45, 23, 948, DateTimeKind.Local).AddTicks(8177),
                             CreatedIpAddress = "192.168.1.241",
                             CreatedMachineName = "DESKTOP-SCCLTAH",
                             Description = "",
@@ -941,7 +943,7 @@ namespace EdenWorks.Infrastructure.Migrations
                         {
                             Id = 43,
                             CategoryId = 11,
-                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 845, DateTimeKind.Local).AddTicks(7830),
+                            CreatedDate = new DateTime(2022, 5, 31, 16, 45, 23, 949, DateTimeKind.Local).AddTicks(44),
                             CreatedIpAddress = "192.168.1.241",
                             CreatedMachineName = "DESKTOP-SCCLTAH",
                             Description = "",
@@ -953,7 +955,7 @@ namespace EdenWorks.Infrastructure.Migrations
                         {
                             Id = 44,
                             CategoryId = 11,
-                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 845, DateTimeKind.Local).AddTicks(9662),
+                            CreatedDate = new DateTime(2022, 5, 31, 16, 45, 23, 949, DateTimeKind.Local).AddTicks(1889),
                             CreatedIpAddress = "192.168.1.241",
                             CreatedMachineName = "DESKTOP-SCCLTAH",
                             Description = "",
@@ -965,7 +967,7 @@ namespace EdenWorks.Infrastructure.Migrations
                         {
                             Id = 45,
                             CategoryId = 11,
-                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 846, DateTimeKind.Local).AddTicks(1642),
+                            CreatedDate = new DateTime(2022, 5, 31, 16, 45, 23, 949, DateTimeKind.Local).AddTicks(3690),
                             CreatedIpAddress = "192.168.1.241",
                             CreatedMachineName = "DESKTOP-SCCLTAH",
                             Description = "",
@@ -977,7 +979,7 @@ namespace EdenWorks.Infrastructure.Migrations
                         {
                             Id = 46,
                             CategoryId = 12,
-                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 846, DateTimeKind.Local).AddTicks(3887),
+                            CreatedDate = new DateTime(2022, 5, 31, 16, 45, 23, 949, DateTimeKind.Local).AddTicks(5744),
                             CreatedIpAddress = "192.168.1.241",
                             CreatedMachineName = "DESKTOP-SCCLTAH",
                             Description = "",
@@ -989,7 +991,7 @@ namespace EdenWorks.Infrastructure.Migrations
                         {
                             Id = 47,
                             CategoryId = 12,
-                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 847, DateTimeKind.Local).AddTicks(964),
+                            CreatedDate = new DateTime(2022, 5, 31, 16, 45, 23, 949, DateTimeKind.Local).AddTicks(7901),
                             CreatedIpAddress = "192.168.1.241",
                             CreatedMachineName = "DESKTOP-SCCLTAH",
                             Description = "",
@@ -1001,7 +1003,7 @@ namespace EdenWorks.Infrastructure.Migrations
                         {
                             Id = 48,
                             CategoryId = 12,
-                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 847, DateTimeKind.Local).AddTicks(7720),
+                            CreatedDate = new DateTime(2022, 5, 31, 16, 45, 23, 949, DateTimeKind.Local).AddTicks(9831),
                             CreatedIpAddress = "192.168.1.241",
                             CreatedMachineName = "DESKTOP-SCCLTAH",
                             Description = "",
@@ -1013,7 +1015,7 @@ namespace EdenWorks.Infrastructure.Migrations
                         {
                             Id = 49,
                             CategoryId = 12,
-                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 848, DateTimeKind.Local).AddTicks(4164),
+                            CreatedDate = new DateTime(2022, 5, 31, 16, 45, 23, 950, DateTimeKind.Local).AddTicks(1705),
                             CreatedIpAddress = "192.168.1.241",
                             CreatedMachineName = "DESKTOP-SCCLTAH",
                             Description = "",
@@ -1025,7 +1027,7 @@ namespace EdenWorks.Infrastructure.Migrations
                         {
                             Id = 50,
                             CategoryId = 12,
-                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 848, DateTimeKind.Local).AddTicks(6630),
+                            CreatedDate = new DateTime(2022, 5, 31, 16, 45, 23, 950, DateTimeKind.Local).AddTicks(3583),
                             CreatedIpAddress = "192.168.1.241",
                             CreatedMachineName = "DESKTOP-SCCLTAH",
                             Description = "",
@@ -1037,7 +1039,7 @@ namespace EdenWorks.Infrastructure.Migrations
                         {
                             Id = 51,
                             CategoryId = 12,
-                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 848, DateTimeKind.Local).AddTicks(8726),
+                            CreatedDate = new DateTime(2022, 5, 31, 16, 45, 23, 950, DateTimeKind.Local).AddTicks(5607),
                             CreatedIpAddress = "192.168.1.241",
                             CreatedMachineName = "DESKTOP-SCCLTAH",
                             Description = "",
@@ -1049,7 +1051,7 @@ namespace EdenWorks.Infrastructure.Migrations
                         {
                             Id = 52,
                             CategoryId = 12,
-                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 849, DateTimeKind.Local).AddTicks(694),
+                            CreatedDate = new DateTime(2022, 5, 31, 16, 45, 23, 950, DateTimeKind.Local).AddTicks(7435),
                             CreatedIpAddress = "192.168.1.241",
                             CreatedMachineName = "DESKTOP-SCCLTAH",
                             Description = "",
@@ -1061,7 +1063,7 @@ namespace EdenWorks.Infrastructure.Migrations
                         {
                             Id = 53,
                             CategoryId = 12,
-                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 849, DateTimeKind.Local).AddTicks(2608),
+                            CreatedDate = new DateTime(2022, 5, 31, 16, 45, 23, 950, DateTimeKind.Local).AddTicks(9241),
                             CreatedIpAddress = "192.168.1.241",
                             CreatedMachineName = "DESKTOP-SCCLTAH",
                             Description = "",
@@ -1073,7 +1075,7 @@ namespace EdenWorks.Infrastructure.Migrations
                         {
                             Id = 54,
                             CategoryId = 13,
-                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 849, DateTimeKind.Local).AddTicks(7666),
+                            CreatedDate = new DateTime(2022, 5, 31, 16, 45, 23, 951, DateTimeKind.Local).AddTicks(2947),
                             CreatedIpAddress = "192.168.1.241",
                             CreatedMachineName = "DESKTOP-SCCLTAH",
                             Description = "",
@@ -1085,7 +1087,7 @@ namespace EdenWorks.Infrastructure.Migrations
                         {
                             Id = 55,
                             CategoryId = 13,
-                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 850, DateTimeKind.Local).AddTicks(314),
+                            CreatedDate = new DateTime(2022, 5, 31, 16, 45, 23, 951, DateTimeKind.Local).AddTicks(4968),
                             CreatedIpAddress = "192.168.1.241",
                             CreatedMachineName = "DESKTOP-SCCLTAH",
                             Description = "",
@@ -1097,7 +1099,7 @@ namespace EdenWorks.Infrastructure.Migrations
                         {
                             Id = 56,
                             CategoryId = 13,
-                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 850, DateTimeKind.Local).AddTicks(2401),
+                            CreatedDate = new DateTime(2022, 5, 31, 16, 45, 23, 951, DateTimeKind.Local).AddTicks(6890),
                             CreatedIpAddress = "192.168.1.241",
                             CreatedMachineName = "DESKTOP-SCCLTAH",
                             Description = "",
@@ -1109,7 +1111,7 @@ namespace EdenWorks.Infrastructure.Migrations
                         {
                             Id = 57,
                             CategoryId = 13,
-                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 850, DateTimeKind.Local).AddTicks(6609),
+                            CreatedDate = new DateTime(2022, 5, 31, 16, 45, 23, 951, DateTimeKind.Local).AddTicks(8698),
                             CreatedIpAddress = "192.168.1.241",
                             CreatedMachineName = "DESKTOP-SCCLTAH",
                             Description = "",
@@ -1121,7 +1123,7 @@ namespace EdenWorks.Infrastructure.Migrations
                         {
                             Id = 58,
                             CategoryId = 13,
-                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 850, DateTimeKind.Local).AddTicks(9248),
+                            CreatedDate = new DateTime(2022, 5, 31, 16, 45, 23, 952, DateTimeKind.Local).AddTicks(469),
                             CreatedIpAddress = "192.168.1.241",
                             CreatedMachineName = "DESKTOP-SCCLTAH",
                             Description = "",
@@ -1133,7 +1135,7 @@ namespace EdenWorks.Infrastructure.Migrations
                         {
                             Id = 59,
                             CategoryId = 13,
-                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 851, DateTimeKind.Local).AddTicks(2121),
+                            CreatedDate = new DateTime(2022, 5, 31, 16, 45, 23, 952, DateTimeKind.Local).AddTicks(2283),
                             CreatedIpAddress = "192.168.1.241",
                             CreatedMachineName = "DESKTOP-SCCLTAH",
                             Description = "",
@@ -1145,7 +1147,7 @@ namespace EdenWorks.Infrastructure.Migrations
                         {
                             Id = 60,
                             CategoryId = 13,
-                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 851, DateTimeKind.Local).AddTicks(5523),
+                            CreatedDate = new DateTime(2022, 5, 31, 16, 45, 23, 952, DateTimeKind.Local).AddTicks(4070),
                             CreatedIpAddress = "192.168.1.241",
                             CreatedMachineName = "DESKTOP-SCCLTAH",
                             Description = "",
@@ -1157,7 +1159,7 @@ namespace EdenWorks.Infrastructure.Migrations
                         {
                             Id = 61,
                             CategoryId = 13,
-                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 851, DateTimeKind.Local).AddTicks(7849),
+                            CreatedDate = new DateTime(2022, 5, 31, 16, 45, 23, 952, DateTimeKind.Local).AddTicks(5864),
                             CreatedIpAddress = "192.168.1.241",
                             CreatedMachineName = "DESKTOP-SCCLTAH",
                             Description = "",
@@ -1169,7 +1171,7 @@ namespace EdenWorks.Infrastructure.Migrations
                         {
                             Id = 62,
                             CategoryId = 13,
-                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 851, DateTimeKind.Local).AddTicks(9764),
+                            CreatedDate = new DateTime(2022, 5, 31, 16, 45, 23, 952, DateTimeKind.Local).AddTicks(7623),
                             CreatedIpAddress = "192.168.1.241",
                             CreatedMachineName = "DESKTOP-SCCLTAH",
                             Description = "",
@@ -1181,7 +1183,7 @@ namespace EdenWorks.Infrastructure.Migrations
                         {
                             Id = 63,
                             CategoryId = 14,
-                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 852, DateTimeKind.Local).AddTicks(1954),
+                            CreatedDate = new DateTime(2022, 5, 31, 16, 45, 23, 952, DateTimeKind.Local).AddTicks(9345),
                             CreatedIpAddress = "192.168.1.241",
                             CreatedMachineName = "DESKTOP-SCCLTAH",
                             Description = "",
@@ -1193,7 +1195,7 @@ namespace EdenWorks.Infrastructure.Migrations
                         {
                             Id = 64,
                             CategoryId = 14,
-                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 852, DateTimeKind.Local).AddTicks(3808),
+                            CreatedDate = new DateTime(2022, 5, 31, 16, 45, 23, 953, DateTimeKind.Local).AddTicks(2433),
                             CreatedIpAddress = "192.168.1.241",
                             CreatedMachineName = "DESKTOP-SCCLTAH",
                             Description = "",
@@ -1205,7 +1207,7 @@ namespace EdenWorks.Infrastructure.Migrations
                         {
                             Id = 65,
                             CategoryId = 14,
-                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 852, DateTimeKind.Local).AddTicks(5817),
+                            CreatedDate = new DateTime(2022, 5, 31, 16, 45, 23, 953, DateTimeKind.Local).AddTicks(4278),
                             CreatedIpAddress = "192.168.1.241",
                             CreatedMachineName = "DESKTOP-SCCLTAH",
                             Description = "",
@@ -1217,7 +1219,7 @@ namespace EdenWorks.Infrastructure.Migrations
                         {
                             Id = 66,
                             CategoryId = 14,
-                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 852, DateTimeKind.Local).AddTicks(8292),
+                            CreatedDate = new DateTime(2022, 5, 31, 16, 45, 23, 953, DateTimeKind.Local).AddTicks(8037),
                             CreatedIpAddress = "192.168.1.241",
                             CreatedMachineName = "DESKTOP-SCCLTAH",
                             Description = "",
@@ -1229,7 +1231,7 @@ namespace EdenWorks.Infrastructure.Migrations
                         {
                             Id = 67,
                             CategoryId = 14,
-                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 853, DateTimeKind.Local).AddTicks(1447),
+                            CreatedDate = new DateTime(2022, 5, 31, 16, 45, 23, 954, DateTimeKind.Local).AddTicks(8878),
                             CreatedIpAddress = "192.168.1.241",
                             CreatedMachineName = "DESKTOP-SCCLTAH",
                             Description = "",
@@ -1241,7 +1243,7 @@ namespace EdenWorks.Infrastructure.Migrations
                         {
                             Id = 68,
                             CategoryId = 14,
-                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 853, DateTimeKind.Local).AddTicks(3341),
+                            CreatedDate = new DateTime(2022, 5, 31, 16, 45, 23, 955, DateTimeKind.Local).AddTicks(1186),
                             CreatedIpAddress = "192.168.1.241",
                             CreatedMachineName = "DESKTOP-SCCLTAH",
                             Description = "",
@@ -1253,7 +1255,7 @@ namespace EdenWorks.Infrastructure.Migrations
                         {
                             Id = 69,
                             CategoryId = 15,
-                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 853, DateTimeKind.Local).AddTicks(6347),
+                            CreatedDate = new DateTime(2022, 5, 31, 16, 45, 23, 955, DateTimeKind.Local).AddTicks(4286),
                             CreatedIpAddress = "192.168.1.241",
                             CreatedMachineName = "DESKTOP-SCCLTAH",
                             Description = "Şişe 130 TL / Bottle 130 TL",
@@ -1265,7 +1267,7 @@ namespace EdenWorks.Infrastructure.Migrations
                         {
                             Id = 70,
                             CategoryId = 15,
-                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 853, DateTimeKind.Local).AddTicks(8443),
+                            CreatedDate = new DateTime(2022, 5, 31, 16, 45, 23, 955, DateTimeKind.Local).AddTicks(6444),
                             CreatedIpAddress = "192.168.1.241",
                             CreatedMachineName = "DESKTOP-SCCLTAH",
                             Description = "Şişe 35 TL / Bottle 130 TL",
@@ -1277,7 +1279,7 @@ namespace EdenWorks.Infrastructure.Migrations
                         {
                             Id = 71,
                             CategoryId = 15,
-                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 854, DateTimeKind.Local).AddTicks(373),
+                            CreatedDate = new DateTime(2022, 5, 31, 16, 45, 23, 955, DateTimeKind.Local).AddTicks(9572),
                             CreatedIpAddress = "192.168.1.241",
                             CreatedMachineName = "DESKTOP-SCCLTAH",
                             Description = "Şişe 35 TL / Bottle 130 TL",
@@ -1289,7 +1291,7 @@ namespace EdenWorks.Infrastructure.Migrations
                         {
                             Id = 72,
                             CategoryId = 16,
-                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 854, DateTimeKind.Local).AddTicks(2247),
+                            CreatedDate = new DateTime(2022, 5, 31, 16, 45, 23, 956, DateTimeKind.Local).AddTicks(1441),
                             CreatedIpAddress = "192.168.1.241",
                             CreatedMachineName = "DESKTOP-SCCLTAH",
                             Description = "",
@@ -1301,7 +1303,7 @@ namespace EdenWorks.Infrastructure.Migrations
                         {
                             Id = 73,
                             CategoryId = 16,
-                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 854, DateTimeKind.Local).AddTicks(4111),
+                            CreatedDate = new DateTime(2022, 5, 31, 16, 45, 23, 956, DateTimeKind.Local).AddTicks(3237),
                             CreatedIpAddress = "192.168.1.241",
                             CreatedMachineName = "DESKTOP-SCCLTAH",
                             Description = "",
@@ -1313,7 +1315,7 @@ namespace EdenWorks.Infrastructure.Migrations
                         {
                             Id = 74,
                             CategoryId = 16,
-                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 854, DateTimeKind.Local).AddTicks(5972),
+                            CreatedDate = new DateTime(2022, 5, 31, 16, 45, 23, 956, DateTimeKind.Local).AddTicks(5057),
                             CreatedIpAddress = "192.168.1.241",
                             CreatedMachineName = "DESKTOP-SCCLTAH",
                             Description = "",
@@ -1325,7 +1327,7 @@ namespace EdenWorks.Infrastructure.Migrations
                         {
                             Id = 75,
                             CategoryId = 16,
-                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 854, DateTimeKind.Local).AddTicks(7944),
+                            CreatedDate = new DateTime(2022, 5, 31, 16, 45, 23, 956, DateTimeKind.Local).AddTicks(8053),
                             CreatedIpAddress = "192.168.1.241",
                             CreatedMachineName = "DESKTOP-SCCLTAH",
                             Description = "",
@@ -1337,7 +1339,7 @@ namespace EdenWorks.Infrastructure.Migrations
                         {
                             Id = 76,
                             CategoryId = 16,
-                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 854, DateTimeKind.Local).AddTicks(9767),
+                            CreatedDate = new DateTime(2022, 5, 31, 16, 45, 23, 956, DateTimeKind.Local).AddTicks(9900),
                             CreatedIpAddress = "192.168.1.241",
                             CreatedMachineName = "DESKTOP-SCCLTAH",
                             Description = "",
@@ -1349,7 +1351,7 @@ namespace EdenWorks.Infrastructure.Migrations
                         {
                             Id = 77,
                             CategoryId = 16,
-                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 855, DateTimeKind.Local).AddTicks(1870),
+                            CreatedDate = new DateTime(2022, 5, 31, 16, 45, 23, 957, DateTimeKind.Local).AddTicks(1933),
                             CreatedIpAddress = "192.168.1.241",
                             CreatedMachineName = "DESKTOP-SCCLTAH",
                             Description = "",
@@ -1361,7 +1363,7 @@ namespace EdenWorks.Infrastructure.Migrations
                         {
                             Id = 78,
                             CategoryId = 15,
-                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 855, DateTimeKind.Local).AddTicks(4026),
+                            CreatedDate = new DateTime(2022, 5, 31, 16, 45, 23, 957, DateTimeKind.Local).AddTicks(3860),
                             CreatedIpAddress = "192.168.1.241",
                             CreatedMachineName = "DESKTOP-SCCLTAH",
                             Description = "",

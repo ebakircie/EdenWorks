@@ -1,5 +1,6 @@
 ﻿using EdenWorks.Domain.Entites;
 using EdenWorks.Domain.Enums;
+using EdenWorks.Infrastructure.Utilities;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
@@ -13,17 +14,28 @@ namespace EdenWorks.Infrastructure.SeedData
 {
     public class AdminSeeding : IEntityTypeConfiguration<AppUser>
     {
-       
+
         public void Configure(EntityTypeBuilder<AppUser> builder)
         {
             var hasher = new PasswordHasher<AppUser>();
             builder.HasData(
-                new AppUser { Id = 9, UserName = "admin",NormalizedUserName="ADMIN", Email = "admin@gmail.com",PasswordHash=hasher.HashPassword(null,"1234567"),SecurityStamp=Guid.NewGuid().ToString(),
-                    Status=Status.Active,CreatedDate=DateTime.Now }
+                new AppUser
+                {
+                    Id = 9,
+                    UserName = "admin",
+                    NormalizedUserName = "ADMIN",
+                    Email = "admin@gmail.com",
+                    PasswordHash = hasher.HashPassword(null,"123456"),
+                    SecurityStamp = Guid.NewGuid().ToString(),
+                    Status = Status.Active,
+                    CreatedDate = DateTime.Now,
+                    CreatedIpAddress = CatchIP.IpAddress,
+                    CreatedMachineName = Environment.MachineName
+                }
                 );
 
-            
-            
+
+
         }
     }
 }
