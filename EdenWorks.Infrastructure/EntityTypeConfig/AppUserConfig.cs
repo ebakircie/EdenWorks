@@ -10,6 +10,7 @@ namespace EdenWorks.Infrastructure.EntityTypeConfig
 {
     public class AppUserConfig : BaseEntityConfig<AppUser>
     {
+        // AppUser configurations
         public override void Configure(EntityTypeBuilder<AppUser> builder)
         {
             builder.HasKey(x => x.Id);

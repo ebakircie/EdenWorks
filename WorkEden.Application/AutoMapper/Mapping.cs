@@ -9,6 +9,7 @@ using EdenWorks.Domain.Entites;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -17,6 +18,7 @@ namespace EdenWorks.Application.AutoMapper
 {
     public class Mapping:Profile
     {
+        //Using Automapper to map data from one object to another.
         public Mapping()
         {
             CreateMap<Category, CreateCategoryDTO>().ReverseMap();
@@ -33,8 +35,7 @@ namespace EdenWorks.Application.AutoMapper
             CreateMap<AppUser, RegisterDTO>().ReverseMap();
             CreateMap<AppUser, LoginDTO>().ReverseMap();
             CreateMap<AppUser, AppUserVM>().ReverseMap();
-            CreateMap<UpdateProductDTO,AppUserVM>().ReverseMap();
-            
+            CreateMap<UpdateProfileDTO, AppUserVM>().ReverseMap();
         }
     }
 }

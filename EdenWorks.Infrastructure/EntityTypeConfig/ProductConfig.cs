@@ -13,12 +13,13 @@ namespace EdenWorks.Infrastructure.EntityTypeConfig
     {
         public override void Configure(EntityTypeBuilder<Product> builder)
         {
+            //Product configuration
             builder.HasKey(x => x.Id);
-            builder.Property(x => x.Name).IsRequired(false).HasMaxLength(50);
+            builder.Property(x => x.Name).IsRequired(false).HasMaxLength(100);
             builder.Property(x => x.Description).IsRequired(false).HasMaxLength(500);
             builder.Property(x => x.ImagePath).IsRequired(false);
             builder.Property(x => x.Price)
-                .HasPrecision(18, 5)
+                .HasPrecision(18, 1)
                 .HasConversion<decimal>()
                 .IsRequired(true);
 

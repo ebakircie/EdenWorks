@@ -41,23 +41,23 @@ namespace EdenWorks.Infrastructure.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("CreatedIpAddress")
-                        .HasMaxLength(30)
-                        .HasColumnType("nvarchar(30)");
+                        .HasMaxLength(15)
+                        .HasColumnType("nvarchar(15)");
 
                     b.Property<string>("CreatedMachineName")
-                        .HasMaxLength(70)
-                        .HasColumnType("nvarchar(70)");
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<DateTime?>("DeletedDate")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("DeletedIpAddress")
-                        .HasMaxLength(30)
-                        .HasColumnType("nvarchar(30)");
+                        .HasMaxLength(15)
+                        .HasColumnType("nvarchar(15)");
 
                     b.Property<string>("DeletedMachineName")
-                        .HasMaxLength(70)
-                        .HasColumnType("nvarchar(70)");
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<string>("Email")
                         .HasMaxLength(256)
@@ -102,12 +102,12 @@ namespace EdenWorks.Infrastructure.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("UpdatedIpAddress")
-                        .HasMaxLength(30)
-                        .HasColumnType("nvarchar(30)");
+                        .HasMaxLength(15)
+                        .HasColumnType("nvarchar(15)");
 
                     b.Property<string>("UpdatedMachineName")
-                        .HasMaxLength(70)
-                        .HasColumnType("nvarchar(70)");
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<string>("UserName")
                         .IsRequired()
@@ -125,6 +125,25 @@ namespace EdenWorks.Infrastructure.Migrations
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
 
                     b.ToTable("AspNetUsers", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 9,
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "e27acd68-a63f-4b9e-b43f-6ad8b739239a",
+                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 830, DateTimeKind.Local).AddTicks(7361),
+                            Email = "admin@gmail.com",
+                            EmailConfirmed = false,
+                            LockoutEnabled = false,
+                            NormalizedUserName = "ADMIN",
+                            PasswordHash = "AQAAAAEAACcQAAAAECjbLF7vJk5bQHQIyh7yF9K3yxTdOQODjvILjDDnO4yPi4CmrykFyCfVdfUNBlcB7A==",
+                            PhoneNumberConfirmed = false,
+                            SecurityStamp = "cd739253-6bc0-43ab-9cbf-3887a1819f67",
+                            Status = 1,
+                            TwoFactorEnabled = false,
+                            UserName = "admin"
+                        });
                 });
 
             modelBuilder.Entity("EdenWorks.Domain.Entites.Category", b =>
@@ -144,23 +163,23 @@ namespace EdenWorks.Infrastructure.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("CreatedIpAddress")
-                        .HasMaxLength(30)
-                        .HasColumnType("nvarchar(30)");
+                        .HasMaxLength(15)
+                        .HasColumnType("nvarchar(15)");
 
                     b.Property<string>("CreatedMachineName")
-                        .HasMaxLength(70)
-                        .HasColumnType("nvarchar(70)");
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<DateTime?>("DeletedDate")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("DeletedIpAddress")
-                        .HasMaxLength(30)
-                        .HasColumnType("nvarchar(30)");
+                        .HasMaxLength(15)
+                        .HasColumnType("nvarchar(15)");
 
                     b.Property<string>("DeletedMachineName")
-                        .HasMaxLength(70)
-                        .HasColumnType("nvarchar(70)");
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<int>("Status")
                         .HasColumnType("int");
@@ -169,16 +188,162 @@ namespace EdenWorks.Infrastructure.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("UpdatedIpAddress")
-                        .HasMaxLength(30)
-                        .HasColumnType("nvarchar(30)");
+                        .HasMaxLength(15)
+                        .HasColumnType("nvarchar(15)");
 
                     b.Property<string>("UpdatedMachineName")
-                        .HasMaxLength(70)
-                        .HasColumnType("nvarchar(70)");
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
 
                     b.HasKey("Id");
 
                     b.ToTable("Categories");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            CategoryName = "SALATALAR / SALADS",
+                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 830, DateTimeKind.Local).AddTicks(8386),
+                            CreatedIpAddress = "192.168.1.241",
+                            CreatedMachineName = "DESKTOP-SCCLTAH",
+                            Status = 1
+                        },
+                        new
+                        {
+                            Id = 2,
+                            CategoryName = "APERATİFLER / SNACKS",
+                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 831, DateTimeKind.Local).AddTicks(3264),
+                            CreatedIpAddress = "192.168.1.241",
+                            CreatedMachineName = "DESKTOP-SCCLTAH",
+                            Status = 1
+                        },
+                        new
+                        {
+                            Id = 3,
+                            CategoryName = "TOSTLAR / TOASTS",
+                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 831, DateTimeKind.Local).AddTicks(5769),
+                            CreatedIpAddress = "192.168.1.241",
+                            CreatedMachineName = "DESKTOP-SCCLTAH",
+                            Status = 1
+                        },
+                        new
+                        {
+                            Id = 4,
+                            CategoryName = "BURGERLER / BURGERS",
+                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 831, DateTimeKind.Local).AddTicks(9781),
+                            CreatedIpAddress = "192.168.1.241",
+                            CreatedMachineName = "DESKTOP-SCCLTAH",
+                            Status = 1
+                        },
+                        new
+                        {
+                            Id = 5,
+                            CategoryName = "PİDELER / PIDES",
+                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 832, DateTimeKind.Local).AddTicks(3135),
+                            CreatedIpAddress = "192.168.1.241",
+                            CreatedMachineName = "DESKTOP-SCCLTAH",
+                            Status = 1
+                        },
+                        new
+                        {
+                            Id = 6,
+                            CategoryName = "PİZZALAR / PIZZAS",
+                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 832, DateTimeKind.Local).AddTicks(8037),
+                            CreatedIpAddress = "192.168.1.241",
+                            CreatedMachineName = "DESKTOP-SCCLTAH",
+                            Status = 1
+                        },
+                        new
+                        {
+                            Id = 7,
+                            CategoryName = "QUESADILLAS & WRAPS",
+                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 833, DateTimeKind.Local).AddTicks(152),
+                            CreatedIpAddress = "192.168.1.241",
+                            CreatedMachineName = "DESKTOP-SCCLTAH",
+                            Status = 1
+                        },
+                        new
+                        {
+                            Id = 8,
+                            CategoryName = "MEZELER / MEZZES",
+                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 833, DateTimeKind.Local).AddTicks(2397),
+                            CreatedIpAddress = "192.168.1.241",
+                            CreatedMachineName = "DESKTOP-SCCLTAH",
+                            Status = 1
+                        },
+                        new
+                        {
+                            Id = 9,
+                            CategoryName = "IZGARALAR / GRILLS",
+                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 833, DateTimeKind.Local).AddTicks(4502),
+                            CreatedIpAddress = "192.168.1.241",
+                            CreatedMachineName = "DESKTOP-SCCLTAH",
+                            Status = 1
+                        },
+                        new
+                        {
+                            Id = 10,
+                            CategoryName = "MAKARNALAR / PASTAS",
+                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 833, DateTimeKind.Local).AddTicks(7694),
+                            CreatedIpAddress = "192.168.1.241",
+                            CreatedMachineName = "DESKTOP-SCCLTAH",
+                            Status = 1
+                        },
+                        new
+                        {
+                            Id = 11,
+                            CategoryName = "KAHVELER / COFFEES",
+                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 833, DateTimeKind.Local).AddTicks(9711),
+                            CreatedIpAddress = "192.168.1.241",
+                            CreatedMachineName = "DESKTOP-SCCLTAH",
+                            Status = 1
+                        },
+                        new
+                        {
+                            Id = 12,
+                            CategoryName = "SOFT DRINKS",
+                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 834, DateTimeKind.Local).AddTicks(1632),
+                            CreatedIpAddress = "192.168.1.241",
+                            CreatedMachineName = "DESKTOP-SCCLTAH",
+                            Status = 1
+                        },
+                        new
+                        {
+                            Id = 13,
+                            CategoryName = "BİRALAR / BEERS",
+                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 834, DateTimeKind.Local).AddTicks(4042),
+                            CreatedIpAddress = "192.168.1.241",
+                            CreatedMachineName = "DESKTOP-SCCLTAH",
+                            Status = 1
+                        },
+                        new
+                        {
+                            Id = 14,
+                            CategoryName = "RAKILAR / RAKI",
+                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 834, DateTimeKind.Local).AddTicks(6069),
+                            CreatedIpAddress = "192.168.1.241",
+                            CreatedMachineName = "DESKTOP-SCCLTAH",
+                            Status = 1
+                        },
+                        new
+                        {
+                            Id = 15,
+                            CategoryName = "ŞARAPLAR / VINES",
+                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 834, DateTimeKind.Local).AddTicks(8054),
+                            CreatedIpAddress = "192.168.1.241",
+                            CreatedMachineName = "DESKTOP-SCCLTAH",
+                            Status = 1
+                        },
+                        new
+                        {
+                            Id = 16,
+                            CategoryName = "DİĞER İÇKİLER / HARD LIQUORS",
+                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 835, DateTimeKind.Local).AddTicks(5491),
+                            CreatedIpAddress = "192.168.1.241",
+                            CreatedMachineName = "DESKTOP-SCCLTAH",
+                            Status = 1
+                        });
                 });
 
             modelBuilder.Entity("EdenWorks.Domain.Entites.Product", b =>
@@ -196,23 +361,23 @@ namespace EdenWorks.Infrastructure.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("CreatedIpAddress")
-                        .HasMaxLength(30)
-                        .HasColumnType("nvarchar(30)");
+                        .HasMaxLength(15)
+                        .HasColumnType("nvarchar(15)");
 
                     b.Property<string>("CreatedMachineName")
-                        .HasMaxLength(70)
-                        .HasColumnType("nvarchar(70)");
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<DateTime?>("DeletedDate")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("DeletedIpAddress")
-                        .HasMaxLength(30)
-                        .HasColumnType("nvarchar(30)");
+                        .HasMaxLength(15)
+                        .HasColumnType("nvarchar(15)");
 
                     b.Property<string>("DeletedMachineName")
-                        .HasMaxLength(70)
-                        .HasColumnType("nvarchar(70)");
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<string>("Description")
                         .HasMaxLength(500)
@@ -222,12 +387,12 @@ namespace EdenWorks.Infrastructure.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<decimal>("Price")
-                        .HasPrecision(18, 5)
-                        .HasColumnType("decimal(18,5)");
+                        .HasPrecision(18, 1)
+                        .HasColumnType("decimal(18,1)");
 
                     b.Property<int>("Status")
                         .HasColumnType("int");
@@ -236,18 +401,974 @@ namespace EdenWorks.Infrastructure.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("UpdatedIpAddress")
-                        .HasMaxLength(30)
-                        .HasColumnType("nvarchar(30)");
+                        .HasMaxLength(15)
+                        .HasColumnType("nvarchar(15)");
 
                     b.Property<string>("UpdatedMachineName")
-                        .HasMaxLength(70)
-                        .HasColumnType("nvarchar(70)");
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
 
                     b.HasKey("Id");
 
                     b.HasIndex("CategoryId");
 
                     b.ToTable("Products");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            CategoryId = 1,
+                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 836, DateTimeKind.Local).AddTicks(4742),
+                            CreatedIpAddress = "192.168.1.241",
+                            CreatedMachineName = "DESKTOP-SCCLTAH",
+                            Description = "Kırmızı lahana, havuç, yeşil zeytin, mısır, cherry domates ve taze mevsim yeşillikleri ile servis edilir. / Contains red cabbage, carrot, green olive, corn, tomato and seasonal fresh ingredients.",
+                            ImagePath = "/image/products/8c600f0b-ea06-4880-9f05-f419c32c3b94.jpg",
+                            Name = "Akdeniz Salatası / Mediterranean Salad",
+                            Price = 35m,
+                            Status = 1
+                        },
+                        new
+                        {
+                            Id = 2,
+                            CategoryId = 1,
+                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 836, DateTimeKind.Local).AddTicks(8211),
+                            CreatedIpAddress = "192.168.1.241",
+                            CreatedMachineName = "DESKTOP-SCCLTAH",
+                            Description = "Izg. tavuk, domates, salatalık, kornişon turşu ve karışık taze yeşillik ile servis edilir. / Contains grilled chicken, tomato, cucumber, pickle and seasonal fresh ingredients.",
+                            ImagePath = "/image/products/fe52f4fa-966f-4fb3-a206-025aa2ab1802.jpg",
+                            Name = "Izg. Tavuk Salata / Grilled Chicken Salad ",
+                            Price = 35m,
+                            Status = 1
+                        },
+                        new
+                        {
+                            Id = 3,
+                            CategoryId = 1,
+                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 837, DateTimeKind.Local).AddTicks(211),
+                            CreatedIpAddress = "192.168.1.241",
+                            CreatedMachineName = "DESKTOP-SCCLTAH",
+                            Description = "Ton balığı, dilim siyah zeytin, dilim yeşil zeytin, mısır, domates, salatalık, soğan, kornişon turşu ve karışk taze yeşillikler ile servis edilir / Contains tuna, black and green olive, corn, tomato, cucumber, onion, pickle and seasonal fresh ingredients.",
+                            ImagePath = "/image/products/fe73ccae-b72d-48e3-a988-34603c2f05f1.jpg",
+                            Name = "Ton Balıkh Salata / Tuna Salad ",
+                            Price = 40m,
+                            Status = 1
+                        },
+                        new
+                        {
+                            Id = 4,
+                            CategoryId = 1,
+                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 837, DateTimeKind.Local).AddTicks(2128),
+                            CreatedIpAddress = "192.168.1.241",
+                            CreatedMachineName = "DESKTOP-SCCLTAH",
+                            Description = "Izgarada kızartılmış hellim peyniri, domates, salatalık, yeşil biber ve karışık taze yeşillikler ile servis edilir / Contains grilled halomi cheese, tomato, cucumber, green pepper and seasonal fresh ingredients.",
+                            Name = "Izg. Hellim Salata / Grilled Halloumi Salad ",
+                            Price = 40m,
+                            Status = 1
+                        },
+                        new
+                        {
+                            Id = 5,
+                            CategoryId = 2,
+                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 837, DateTimeKind.Local).AddTicks(4150),
+                            CreatedIpAddress = "192.168.1.241",
+                            CreatedMachineName = "DESKTOP-SCCLTAH",
+                            Description = "Patates, Patlıcan, papya Biber, Kavrulmuş kuru acı biber ve Şanmsaklı süzme yoğurt ile servis edilir / Contains Fried potato, eggplant, capia pepper, hot dry pepper and yoghurt with garlic.",
+                            Name = "Yoğurtlu Kızartma / Fried food with yoghurt ",
+                            Price = 30m,
+                            Status = 1
+                        },
+                        new
+                        {
+                            Id = 6,
+                            CategoryId = 2,
+                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 837, DateTimeKind.Local).AddTicks(6041),
+                            CreatedIpAddress = "192.168.1.241",
+                            CreatedMachineName = "DESKTOP-SCCLTAH",
+                            Description = "Parmak dilim patates, sosis, soğan halkaları kizartılarak servis edilir / Roasting Of potato, sausage and onion rings.",
+                            ImagePath = "/image/products/4c2050a8-a31f-4a4e-b4fd-796903a5c0aa.jpg",
+                            Name = "Bira Tabağı / Beer Plate ",
+                            Price = 35m,
+                            Status = 1
+                        },
+                        new
+                        {
+                            Id = 7,
+                            CategoryId = 2,
+                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 837, DateTimeKind.Local).AddTicks(7876),
+                            CreatedIpAddress = "192.168.1.241",
+                            CreatedMachineName = "DESKTOP-SCCLTAH",
+                            Description = "200 Gr tavuk göğsü içinde, jambon içerisine sarılmış tel peynir ile galeta ununda kızartılarak, patates kızartması ile servis edilir / Contains 200Gr chickhen breast and beef jam rolled up with cheese inside of it, fried in oil with french fries.",
+                            ImagePath = "/image/products/dba35200-a1eb-4cfd-8a37-f7ed4739fb17.jpg",
+                            Name = "Cordon Bleu",
+                            Price = 40m,
+                            Status = 1
+                        },
+                        new
+                        {
+                            Id = 8,
+                            CategoryId = 2,
+                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 837, DateTimeKind.Local).AddTicks(9700),
+                            CreatedIpAddress = "192.168.1.241",
+                            CreatedMachineName = "DESKTOP-SCCLTAH",
+                            Description = "Balık fileto, karides, mantar, kaşar peyniri, sarımsak, maydanoz, galeta unu ve baharatlar ile servis edilir / Contains fillet fish, shrimp, mushroom, cheese, garlic, parsley, bread crumbs with spices.",
+                            Name = "Balık Köftesi / Fish Balls",
+                            Price = 40m,
+                            Status = 1
+                        },
+                        new
+                        {
+                            Id = 9,
+                            CategoryId = 2,
+                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 838, DateTimeKind.Local).AddTicks(1855),
+                            CreatedIpAddress = "192.168.1.241",
+                            CreatedMachineName = "DESKTOP-SCCLTAH",
+                            Description = "Galeta ununda kızartılmış Mezgit fileto, ev yapımı kızartılmış patates ile servis edilir / Contains fried North Atlantic whiting with french fries.",
+                            Name = "Fish and Chips",
+                            Price = 45m,
+                            Status = 1
+                        },
+                        new
+                        {
+                            Id = 10,
+                            CategoryId = 3,
+                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 838, DateTimeKind.Local).AddTicks(3721),
+                            CreatedIpAddress = "192.168.1.241",
+                            CreatedMachineName = "DESKTOP-SCCLTAH",
+                            Description = "Kepek ekmeğinde kaşar pey. ve köz. domates yanında yeşil ve siyah zeytin ile servis edilir / Contains cheese and tomato inside of bran bread with green and black olive.",
+                            Name = "Kepek Ekmeğinde Tost / Bran Bread Toast",
+                            Price = 25m,
+                            Status = 1
+                        },
+                        new
+                        {
+                            Id = 11,
+                            CategoryId = 3,
+                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 838, DateTimeKind.Local).AddTicks(6199),
+                            CreatedIpAddress = "192.168.1.241",
+                            CreatedMachineName = "DESKTOP-SCCLTAH",
+                            Description = "Bazlama ekmeğinde kasap syucuğu ve Kaşar peyniri yanında patates kızartması ile servis edilir / Contains sausage with cheese with french fries.",
+                            ImagePath = "/image/products/b67b0113-550f-4223-8c0f-038558e80b93.jpg",
+                            Name = "Kasap Sucuklu Kaşarlı Tost / Toast with sausage and cheese",
+                            Price = 35m,
+                            Status = 1
+                        },
+                        new
+                        {
+                            Id = 12,
+                            CategoryId = 3,
+                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 838, DateTimeKind.Local).AddTicks(8869),
+                            CreatedIpAddress = "192.168.1.241",
+                            CreatedMachineName = "DESKTOP-SCCLTAH",
+                            Description = "Bazlama ekmeğinde Ezine Peyniri, Kaşar peyniri, İzmir tulum ve Tel peyniri yanında patates kızartması ile servis edilir / Contains mixture of 4 different type of cheese with french fries.",
+                            ImagePath = "/image/products/6f601cc6-7b59-4f21-a3e5-fd20d8cbb77d.jpg",
+                            Name = "4 Peynirli Tost / Mix of  Cheese Toast",
+                            Price = 35m,
+                            Status = 1
+                        },
+                        new
+                        {
+                            Id = 13,
+                            CategoryId = 3,
+                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 839, DateTimeKind.Local).AddTicks(1296),
+                            CreatedIpAddress = "192.168.1.241",
+                            CreatedMachineName = "DESKTOP-SCCLTAH",
+                            Description = "Bazlama ekmeğinde kaşar peyniri, tel peyniri, kasap sucuğu, közlenmiş domates, biber ve turşu yanında patates kızartması ile servis edilir / Contains sausage, cheese, roasted tomato, pepper and pickle with french fries.",
+                            Name = "Karışık Tost / Mixed Toast",
+                            Price = 40m,
+                            Status = 1
+                        },
+                        new
+                        {
+                            Id = 14,
+                            CategoryId = 4,
+                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 839, DateTimeKind.Local).AddTicks(3148),
+                            CreatedIpAddress = "192.168.1.241",
+                            CreatedMachineName = "DESKTOP-SCCLTAH",
+                            Description = "180 gr ev yapımı köfte, karamelize soğan, közlenmiş domates, barbekü sos, turşu ve patates kızartması ile servis edilir / Contains 180 gr handmate meatball, caramelized onion, roasted tomato, barbeque sauce and pickle with french fries.",
+                            ImagePath = "/image/products/f2e14afe-5c91-4ec5-a9a5-a718c26b4552.jpg",
+                            Name = "Kasap Burger / Hamburger",
+                            Price = 40m,
+                            Status = 1
+                        },
+                        new
+                        {
+                            Id = 15,
+                            CategoryId = 4,
+                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 839, DateTimeKind.Local).AddTicks(7381),
+                            CreatedIpAddress = "192.168.1.241",
+                            CreatedMachineName = "DESKTOP-SCCLTAH",
+                            Description = "180 gr ev yapımı köfte, karamelize soğan, közlenmiş domates, turşu, barbekü sos, cheddar peynir ve patates kızartması ile servis edilir / Contains 180 gr handmade meatball, caramelized onion, roasted tomato, barbeque sauce, chedddar and pickle with french fries.",
+                            ImagePath = "/image/products/cf32dddf-5237-40df-9978-abda40b777b1.jpg",
+                            Name = "Cheese Burger",
+                            Price = 45m,
+                            Status = 1
+                        },
+                        new
+                        {
+                            Id = 16,
+                            CategoryId = 5,
+                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 839, DateTimeKind.Local).AddTicks(9825),
+                            CreatedIpAddress = "192.168.1.241",
+                            CreatedMachineName = "DESKTOP-SCCLTAH",
+                            Description = "İnce hamur, dana kıyma, mevsim yeşillikleri eklenerek servis edilir / Contains thin pide dough, mince, with seasonal fresh ingredients.",
+                            Name = "Lahmacun",
+                            Price = 20m,
+                            Status = 1
+                        },
+                        new
+                        {
+                            Id = 17,
+                            CategoryId = 5,
+                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 840, DateTimeKind.Local).AddTicks(3848),
+                            CreatedIpAddress = "192.168.1.241",
+                            CreatedMachineName = "DESKTOP-SCCLTAH",
+                            Description = "İnce pide hamuru, İzmir tulum, Kaşar, Ezine ve Tel peyniri ile servis edilir / Contains thin pide dough, 4 different type of cheese.",
+                            Name = "4 Peynirli Pide / Mix of 4 Cheese Pide",
+                            Price = 33m,
+                            Status = 1
+                        },
+                        new
+                        {
+                            Id = 18,
+                            CategoryId = 5,
+                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 840, DateTimeKind.Local).AddTicks(7369),
+                            CreatedIpAddress = "192.168.1.241",
+                            CreatedMachineName = "DESKTOP-SCCLTAH",
+                            Description = "İnce pide hamuru, dana kıyma, mevsim yeşillikleri eklenerek servis edilir / Contains thin pide dough, mince with seasonal fresh ingredients.",
+                            ImagePath = "/image/products/b7fab8d0-aed8-4826-9eff-19548f0fc524.jpg",
+                            Name = "Kıymalı Pide / Minced Pide",
+                            Price = 35m,
+                            Status = 1
+                        },
+                        new
+                        {
+                            Id = 19,
+                            CategoryId = 5,
+                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 840, DateTimeKind.Local).AddTicks(9442),
+                            CreatedIpAddress = "192.168.1.241",
+                            CreatedMachineName = "DESKTOP-SCCLTAH",
+                            Description = "İnce pide hamuru, kasap sucuk ve kaşar peyniri ile servis edilir / Contains thin pide dough, fermented sausage with cheese.",
+                            ImagePath = "/image/products/9eeca60a-918a-4195-ac9c-f9b8fd4080ee.jpg",
+                            Name = "Kasap Sucuklu Kaşarlı Pide / Sausage Pide with Cheese",
+                            Price = 37m,
+                            Status = 1
+                        },
+                        new
+                        {
+                            Id = 20,
+                            CategoryId = 5,
+                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 841, DateTimeKind.Local).AddTicks(1328),
+                            CreatedIpAddress = "192.168.1.241",
+                            CreatedMachineName = "DESKTOP-SCCLTAH",
+                            Description = "Pide Hamuru, Dana kuşbaşı ve Kaşar peyniri ile servis edilir / Contains thin pide dough, meat with cheese.",
+                            ImagePath = "/image/products/22aca5b5-2c90-491b-a3fb-c1cf023ced97.jpg",
+                            Name = "Kuşbaşılı Kaşarlı Pide / Pide with meat and cheese",
+                            Price = 40m,
+                            Status = 1
+                        },
+                        new
+                        {
+                            Id = 21,
+                            CategoryId = 6,
+                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 841, DateTimeKind.Local).AddTicks(3436),
+                            CreatedIpAddress = "192.168.1.241",
+                            CreatedMachineName = "DESKTOP-SCCLTAH",
+                            Description = "Pizza hamuru, Mozzarella peyniri, domates, siyah zeytin, mantar, mısır ile servis edilir / Pizza dough contains Mozzarella , tomato, black olive, mushroom and corn.",
+                            Name = "Vejeteryan Pizza / Vegetarian Pizza",
+                            Price = 30m,
+                            Status = 1
+                        },
+                        new
+                        {
+                            Id = 22,
+                            CategoryId = 6,
+                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 841, DateTimeKind.Local).AddTicks(5356),
+                            CreatedIpAddress = "192.168.1.241",
+                            CreatedMachineName = "DESKTOP-SCCLTAH",
+                            Description = "Pizza hamuru, Mozzarella peyniri, ton balığı, siyah zeytin, yeşil zeytin, mısır ve kekik ile servis edilir / Pizza dough contains Mozzarella, tuna, black and green olive, corn with thyme.",
+                            Name = "Ton Balıklı Pizza / Tuna Fish Pizza",
+                            Price = 40m,
+                            Status = 1
+                        },
+                        new
+                        {
+                            Id = 23,
+                            CategoryId = 6,
+                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 841, DateTimeKind.Local).AddTicks(7198),
+                            CreatedIpAddress = "192.168.1.241",
+                            CreatedMachineName = "DESKTOP-SCCLTAH",
+                            Description = "Pizza hamuru, Mozzarella peyniri, kasap sucuk, sosis, domates,mısır, siyah zeytin, yeşil zeytin ve mantar ile servis edilir / Pizza dough contains Mozzarella, corn, tomato, black olive, green olive and mushroom.",
+                            ImagePath = "/image/products/bb0f9322-e90e-4e47-b5bf-4dc759904031.jpg",
+                            Name = "Eden Special Pizza",
+                            Price = 45m,
+                            Status = 1
+                        },
+                        new
+                        {
+                            Id = 24,
+                            CategoryId = 7,
+                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 841, DateTimeKind.Local).AddTicks(9303),
+                            CreatedIpAddress = "192.168.1.241",
+                            CreatedMachineName = "DESKTOP-SCCLTAH",
+                            Description = "Tortilla ekmeği, tavuk eti, yeşil biber, kırmızı biber, domates, soğan, peynir, baharatlar ve cips ile servis edilir / Contains tortilla bread, beef, green pepper, red pepper, tomato, onion, cheese, species and french fries.",
+                            ImagePath = "/image/products/ae81fa43-5564-461f-aa04-367eca9759c8.jpg",
+                            Name = "Tavuklu / Chicken Quesadilla & Wrap",
+                            Price = 30m,
+                            Status = 1
+                        },
+                        new
+                        {
+                            Id = 25,
+                            CategoryId = 7,
+                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 842, DateTimeKind.Local).AddTicks(1543),
+                            CreatedIpAddress = "192.168.1.241",
+                            CreatedMachineName = "DESKTOP-SCCLTAH",
+                            Description = "Tortilla ekmeği, dana eti, yeşil biber, kırmızı biber, domates, soğan, peynir, baharatlar ve cips ile servis edilir / Contains tortilla bread, beef, green pepper, red pepper, tomato, onion, cheese, species and french fries.",
+                            ImagePath = "/image/products/0c6cc40a-749c-464c-b5e5-1c17f6ded018.jpg",
+                            Name = "Etli / Beef Quesadilla & Wrap",
+                            Price = 35m,
+                            Status = 1
+                        },
+                        new
+                        {
+                            Id = 26,
+                            CategoryId = 7,
+                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 842, DateTimeKind.Local).AddTicks(3983),
+                            CreatedIpAddress = "192.168.1.241",
+                            CreatedMachineName = "DESKTOP-SCCLTAH",
+                            Description = "Tortilla ekmeği, balık, yeşil biber, kırmızı biber, domates, soğan, peynir, baharatlar, limon ve cips ile servis edilir / Contains tortilla bread, beef, green pepper, red pepper, tomato, onion, cheese, spices, lemoın and french fries",
+                            Name = "Balıklı / Fish Quesadilla",
+                            Price = 40m,
+                            Status = 1
+                        },
+                        new
+                        {
+                            Id = 27,
+                            CategoryId = 8,
+                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 842, DateTimeKind.Local).AddTicks(5899),
+                            CreatedIpAddress = "192.168.1.241",
+                            CreatedMachineName = "DESKTOP-SCCLTAH",
+                            Description = "Ezine peyniri, ceviz içi, sarımsak, sızma zeytinyağı, maydanoz, kekik ve pul biber ile servis edilir / Contains Ezine cheese, walnut, garlic, olive oil, parsley, thyme and chili pepper.",
+                            ImagePath = "/image/products/d266ef17-93b4-4d23-92c4-60c7ddec3758.jpg",
+                            Name = "Girit Ezmesi / Crete Paste ",
+                            Price = 20m,
+                            Status = 1
+                        },
+                        new
+                        {
+                            Id = 28,
+                            CategoryId = 8,
+                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 842, DateTimeKind.Local).AddTicks(7761),
+                            CreatedIpAddress = "192.168.1.241",
+                            CreatedMachineName = "DESKTOP-SCCLTAH",
+                            Description = "Tereyağında kavrulmuş acı kuru biber, pul biber, süzme yoğurt ile servis edilir / contains roasted hot dry pepper in butter, chili pepper and yoghurt.",
+                            ImagePath = "/image/products/5346297c-d9c2-45ed-8bd7-d85d01e6a4d7.jpg",
+                            Name = "Atom",
+                            Price = 20m,
+                            Status = 1
+                        },
+                        new
+                        {
+                            Id = 29,
+                            CategoryId = 8,
+                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 842, DateTimeKind.Local).AddTicks(9607),
+                            CreatedIpAddress = "192.168.1.241",
+                            CreatedMachineName = "DESKTOP-SCCLTAH",
+                            Description = "Közlenmiş patlıcan, süzme yoğurt, sarımsak ve zeytinyağı ile servis edilir / Contains roasted eggplant, yoghurt, garlic and olive oil.",
+                            Name = "Yoğurtlu Közlenmiş Patlıcan (Köpoğlu) / Eggplant Salad",
+                            Price = 30m,
+                            Status = 1
+                        },
+                        new
+                        {
+                            Id = 30,
+                            CategoryId = 8,
+                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 843, DateTimeKind.Local).AddTicks(1427),
+                            CreatedIpAddress = "192.168.1.241",
+                            CreatedMachineName = "DESKTOP-SCCLTAH",
+                            Description = "Ezine peyniri, tel peyniri, közlenmiş hellim peyniri, tulum peyniri, domates ve roka ile servis edilir / Contains mixture of 4 different type of cheese served with rocket.",
+                            ImagePath = "/image/products/7d091183-18e4-4951-9a2e-25e6ba56193d.jpg",
+                            Name = "Peynir Tabağı / Cheese Plate",
+                            Price = 30m,
+                            Status = 1
+                        },
+                        new
+                        {
+                            Id = 31,
+                            CategoryId = 8,
+                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 843, DateTimeKind.Local).AddTicks(3230),
+                            CreatedIpAddress = "192.168.1.241",
+                            CreatedMachineName = "DESKTOP-SCCLTAH",
+                            Description = "Karides, sivri biber, tereyağ, sarımsak, domates, mantar, kaşar peyniri, tuz ve kekik ile servis edilir / Contains shrimp, pointed pepper, butter, garlic, tomato, mushroom, cheese, salt and thyme",
+                            Name = "Karides Güveç / Shrimp Stew",
+                            Price = 40m,
+                            Status = 1
+                        },
+                        new
+                        {
+                            Id = 32,
+                            CategoryId = 8,
+                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 843, DateTimeKind.Local).AddTicks(6150),
+                            CreatedIpAddress = "192.168.1.241",
+                            CreatedMachineName = "DESKTOP-SCCLTAH",
+                            Description = "Özel ununda kızartılmış Kalamar, sos, limon ve roka ile servis edilir / Contains Fried Calamari, served with special sauce, lemon and arugula.",
+                            Name = "Kalamar Tava / Fried Calamari",
+                            Price = 40m,
+                            Status = 1
+                        },
+                        new
+                        {
+                            Id = 33,
+                            CategoryId = 9,
+                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 843, DateTimeKind.Local).AddTicks(8417),
+                            CreatedIpAddress = "192.168.1.241",
+                            CreatedMachineName = "DESKTOP-SCCLTAH",
+                            Description = "Marine edilmiş kemiksiz tavuk but, közlenmiş domates, barbekü sosu ve patates kızartması ile servis edilir / Contains marinated chicked, roasted tomato with barbeque sauce and french fries.",
+                            Name = "Barbekü Soslu Tavuk Izgara / Grilled Chicken with Barbecue Souce",
+                            Price = 35m,
+                            Status = 1
+                        },
+                        new
+                        {
+                            Id = 34,
+                            CategoryId = 9,
+                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 844, DateTimeKind.Local).AddTicks(334),
+                            CreatedIpAddress = "192.168.1.241",
+                            CreatedMachineName = "DESKTOP-SCCLTAH",
+                            Description = "200 gr. ev yapımı köfte, közlenmiş domates, biber, karamelize soğan ve patates kızartması ile servis edilir / Contains 200 gr handmade meatballs, roasted tomato, pepper, caramelized onion with french fries.",
+                            Name = "Izgara Kasap Köfte / Grilled Meatballs",
+                            Price = 40m,
+                            Status = 1
+                        },
+                        new
+                        {
+                            Id = 35,
+                            CategoryId = 9,
+                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 844, DateTimeKind.Local).AddTicks(2201),
+                            CreatedIpAddress = "192.168.1.241",
+                            CreatedMachineName = "DESKTOP-SCCLTAH",
+                            Description = "200 gr. özel yapım köfte, yoğurt, yeşil biber, kuru kırmızı biber, domates, tereyağ ve tuz ile servis edilir / Contains 200 gr special meatballs, yoghurt, green pepper, dry red pepper, tomato, butter and salt. ",
+                            Name = "Yoğurtlu Tire Köftesi / Tire Kebab with yoghurt",
+                            Price = 40m,
+                            Status = 1
+                        },
+                        new
+                        {
+                            Id = 36,
+                            CategoryId = 9,
+                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 844, DateTimeKind.Local).AddTicks(4043),
+                            CreatedIpAddress = "192.168.1.241",
+                            CreatedMachineName = "DESKTOP-SCCLTAH",
+                            Description = "200 gr. marine edilmiş Kuzey Atlantik mezgiti, soğan, cherry domates, roka ve kızarmış limon ile servis edilir / Contains 200 gr marin North Atlantic whiting, onion, cherry tomato, arugula and grilled lemon",
+                            Name = "Izgara Mezgit Marin / Grilled Whiting Marin",
+                            Price = 45m,
+                            Status = 1
+                        },
+                        new
+                        {
+                            Id = 37,
+                            CategoryId = 9,
+                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 844, DateTimeKind.Local).AddTicks(5904),
+                            CreatedIpAddress = "192.168.1.241",
+                            CreatedMachineName = "DESKTOP-SCCLTAH",
+                            Description = "200 gr Kuzu eti, karamelize soğan, közlenmiş biber, domates ve cips ile servis edilir / Contains 200 gr slim sliced lamb, caramelized onion, roasted pepper, tomato with french fries.",
+                            Name = "Külbastı / Grilled Cotlet",
+                            Price = 60m,
+                            Status = 1
+                        },
+                        new
+                        {
+                            Id = 38,
+                            CategoryId = 10,
+                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 844, DateTimeKind.Local).AddTicks(7814),
+                            CreatedIpAddress = "192.168.1.241",
+                            CreatedMachineName = "DESKTOP-SCCLTAH",
+                            Description = "Bolonez sos, kıyma, doamtes ve sarımsak ile servis edilir / Contains bolognese sauce, mince, tomato and garlic",
+                            Name = "Spagetti Bolognese",
+                            Price = 35m,
+                            Status = 1
+                        },
+                        new
+                        {
+                            Id = 39,
+                            CategoryId = 10,
+                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 844, DateTimeKind.Local).AddTicks(9913),
+                            CreatedIpAddress = "192.168.1.241",
+                            CreatedMachineName = "DESKTOP-SCCLTAH",
+                            Description = "Krema, köri sos, peynir ve mantar ile servis edilir / Contains curry sauce, cheese, mushroom and cream.",
+                            Name = "Köri Soslu Penne / Penne with Curry Sauce",
+                            Price = 35m,
+                            Status = 1
+                        },
+                        new
+                        {
+                            Id = 40,
+                            CategoryId = 10,
+                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 845, DateTimeKind.Local).AddTicks(1848),
+                            CreatedIpAddress = "192.168.1.241",
+                            CreatedMachineName = "DESKTOP-SCCLTAH",
+                            Description = "Fettucini makarna, krema, tereyağ, mantar, tavuk göğsü, sarımsak, fesleğen, peynir, karabiber ve tuz ile servis edilir / Fettucine, heavy cream, butter, mushroom, chicken breast, garlic, basil, cheese, salt and pepper.",
+                            Name = "Fettucini Alfredo",
+                            Price = 40m,
+                            Status = 1
+                        },
+                        new
+                        {
+                            Id = 41,
+                            CategoryId = 11,
+                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 845, DateTimeKind.Local).AddTicks(3779),
+                            CreatedIpAddress = "192.168.1.241",
+                            CreatedMachineName = "DESKTOP-SCCLTAH",
+                            Description = "",
+                            Name = "Türk Kahvesi / Turkish Coffee",
+                            Price = 12m,
+                            Status = 1
+                        },
+                        new
+                        {
+                            Id = 42,
+                            CategoryId = 11,
+                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 845, DateTimeKind.Local).AddTicks(5968),
+                            CreatedIpAddress = "192.168.1.241",
+                            CreatedMachineName = "DESKTOP-SCCLTAH",
+                            Description = "",
+                            Name = "Espresso",
+                            Price = 15m,
+                            Status = 1
+                        },
+                        new
+                        {
+                            Id = 43,
+                            CategoryId = 11,
+                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 845, DateTimeKind.Local).AddTicks(7830),
+                            CreatedIpAddress = "192.168.1.241",
+                            CreatedMachineName = "DESKTOP-SCCLTAH",
+                            Description = "",
+                            Name = "French Press Filter Coffee",
+                            Price = 20m,
+                            Status = 1
+                        },
+                        new
+                        {
+                            Id = 44,
+                            CategoryId = 11,
+                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 845, DateTimeKind.Local).AddTicks(9662),
+                            CreatedIpAddress = "192.168.1.241",
+                            CreatedMachineName = "DESKTOP-SCCLTAH",
+                            Description = "",
+                            Name = "Americano",
+                            Price = 20m,
+                            Status = 1
+                        },
+                        new
+                        {
+                            Id = 45,
+                            CategoryId = 11,
+                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 846, DateTimeKind.Local).AddTicks(1642),
+                            CreatedIpAddress = "192.168.1.241",
+                            CreatedMachineName = "DESKTOP-SCCLTAH",
+                            Description = "",
+                            Name = "Cafe Latte / Café Con Leche",
+                            Price = 20m,
+                            Status = 1
+                        },
+                        new
+                        {
+                            Id = 46,
+                            CategoryId = 12,
+                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 846, DateTimeKind.Local).AddTicks(3887),
+                            CreatedIpAddress = "192.168.1.241",
+                            CreatedMachineName = "DESKTOP-SCCLTAH",
+                            Description = "",
+                            Name = "Taze Sıkılmış Portakal / Orange Juice",
+                            Price = 15m,
+                            Status = 1
+                        },
+                        new
+                        {
+                            Id = 47,
+                            CategoryId = 12,
+                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 847, DateTimeKind.Local).AddTicks(964),
+                            CreatedIpAddress = "192.168.1.241",
+                            CreatedMachineName = "DESKTOP-SCCLTAH",
+                            Description = "",
+                            Name = "Nar Suyu / Pomegranate Juice",
+                            Price = 17m,
+                            Status = 1
+                        },
+                        new
+                        {
+                            Id = 48,
+                            CategoryId = 12,
+                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 847, DateTimeKind.Local).AddTicks(7720),
+                            CreatedIpAddress = "192.168.1.241",
+                            CreatedMachineName = "DESKTOP-SCCLTAH",
+                            Description = "",
+                            Name = "Coca Cola / Light / Zero",
+                            Price = 8m,
+                            Status = 1
+                        },
+                        new
+                        {
+                            Id = 49,
+                            CategoryId = 12,
+                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 848, DateTimeKind.Local).AddTicks(4164),
+                            CreatedIpAddress = "192.168.1.241",
+                            CreatedMachineName = "DESKTOP-SCCLTAH",
+                            Description = "",
+                            Name = "Sprite / Fanta",
+                            Price = 8m,
+                            Status = 1
+                        },
+                        new
+                        {
+                            Id = 50,
+                            CategoryId = 12,
+                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 848, DateTimeKind.Local).AddTicks(6630),
+                            CreatedIpAddress = "192.168.1.241",
+                            CreatedMachineName = "DESKTOP-SCCLTAH",
+                            Description = "",
+                            Name = "Meyve Suyu Vişne / Şeftali / Karışık (Cherry Juice / Peach / Mixed Juice)",
+                            Price = 8m,
+                            Status = 1
+                        },
+                        new
+                        {
+                            Id = 51,
+                            CategoryId = 12,
+                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 848, DateTimeKind.Local).AddTicks(8726),
+                            CreatedIpAddress = "192.168.1.241",
+                            CreatedMachineName = "DESKTOP-SCCLTAH",
+                            Description = "",
+                            Name = "Ayran",
+                            Price = 6m,
+                            Status = 1
+                        },
+                        new
+                        {
+                            Id = 52,
+                            CategoryId = 12,
+                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 849, DateTimeKind.Local).AddTicks(694),
+                            CreatedIpAddress = "192.168.1.241",
+                            CreatedMachineName = "DESKTOP-SCCLTAH",
+                            Description = "",
+                            Name = "Soda",
+                            Price = 6m,
+                            Status = 1
+                        },
+                        new
+                        {
+                            Id = 53,
+                            CategoryId = 12,
+                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 849, DateTimeKind.Local).AddTicks(2608),
+                            CreatedIpAddress = "192.168.1.241",
+                            CreatedMachineName = "DESKTOP-SCCLTAH",
+                            Description = "",
+                            Name = "Su",
+                            Price = 4m,
+                            Status = 1
+                        },
+                        new
+                        {
+                            Id = 54,
+                            CategoryId = 13,
+                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 849, DateTimeKind.Local).AddTicks(7666),
+                            CreatedIpAddress = "192.168.1.241",
+                            CreatedMachineName = "DESKTOP-SCCLTAH",
+                            Description = "",
+                            Name = "Efes / Efes Malt 50 cl",
+                            Price = 23m,
+                            Status = 1
+                        },
+                        new
+                        {
+                            Id = 55,
+                            CategoryId = 13,
+                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 850, DateTimeKind.Local).AddTicks(314),
+                            CreatedIpAddress = "192.168.1.241",
+                            CreatedMachineName = "DESKTOP-SCCLTAH",
+                            Description = "",
+                            Name = "Bomonti",
+                            Price = 23m,
+                            Status = 1
+                        },
+                        new
+                        {
+                            Id = 56,
+                            CategoryId = 13,
+                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 850, DateTimeKind.Local).AddTicks(2401),
+                            CreatedIpAddress = "192.168.1.241",
+                            CreatedMachineName = "DESKTOP-SCCLTAH",
+                            Description = "",
+                            Name = "Bomonti Filtresiz",
+                            Price = 25m,
+                            Status = 1
+                        },
+                        new
+                        {
+                            Id = 57,
+                            CategoryId = 13,
+                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 850, DateTimeKind.Local).AddTicks(6609),
+                            CreatedIpAddress = "192.168.1.241",
+                            CreatedMachineName = "DESKTOP-SCCLTAH",
+                            Description = "",
+                            Name = "Tuborg Gold",
+                            Price = 23m,
+                            Status = 1
+                        },
+                        new
+                        {
+                            Id = 58,
+                            CategoryId = 13,
+                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 850, DateTimeKind.Local).AddTicks(9248),
+                            CreatedIpAddress = "192.168.1.241",
+                            CreatedMachineName = "DESKTOP-SCCLTAH",
+                            Description = "",
+                            Name = "Tuborg Amber / Bud",
+                            Price = 25m,
+                            Status = 1
+                        },
+                        new
+                        {
+                            Id = 59,
+                            CategoryId = 13,
+                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 851, DateTimeKind.Local).AddTicks(2121),
+                            CreatedIpAddress = "192.168.1.241",
+                            CreatedMachineName = "DESKTOP-SCCLTAH",
+                            Description = "",
+                            Name = "Carlsberg / Miller / Beck's",
+                            Price = 27m,
+                            Status = 1
+                        },
+                        new
+                        {
+                            Id = 60,
+                            CategoryId = 13,
+                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 851, DateTimeKind.Local).AddTicks(5523),
+                            CreatedIpAddress = "192.168.1.241",
+                            CreatedMachineName = "DESKTOP-SCCLTAH",
+                            Description = "",
+                            Name = "Corona Extra / Sol",
+                            Price = 30m,
+                            Status = 1
+                        },
+                        new
+                        {
+                            Id = 61,
+                            CategoryId = 13,
+                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 851, DateTimeKind.Local).AddTicks(7849),
+                            CreatedIpAddress = "192.168.1.241",
+                            CreatedMachineName = "DESKTOP-SCCLTAH",
+                            Description = "",
+                            Name = "Desperado / Amsterdam",
+                            Price = 35m,
+                            Status = 1
+                        },
+                        new
+                        {
+                            Id = 62,
+                            CategoryId = 13,
+                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 851, DateTimeKind.Local).AddTicks(9764),
+                            CreatedIpAddress = "192.168.1.241",
+                            CreatedMachineName = "DESKTOP-SCCLTAH",
+                            Description = "",
+                            Name = "Guinness",
+                            Price = 37m,
+                            Status = 1
+                        },
+                        new
+                        {
+                            Id = 63,
+                            CategoryId = 14,
+                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 852, DateTimeKind.Local).AddTicks(1954),
+                            CreatedIpAddress = "192.168.1.241",
+                            CreatedMachineName = "DESKTOP-SCCLTAH",
+                            Description = "",
+                            Name = "Tekirdağ (Tek)",
+                            Price = 25m,
+                            Status = 1
+                        },
+                        new
+                        {
+                            Id = 64,
+                            CategoryId = 14,
+                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 852, DateTimeKind.Local).AddTicks(3808),
+                            CreatedIpAddress = "192.168.1.241",
+                            CreatedMachineName = "DESKTOP-SCCLTAH",
+                            Description = "",
+                            Name = "Tekirdağ (Duble)",
+                            Price = 35m,
+                            Status = 1
+                        },
+                        new
+                        {
+                            Id = 65,
+                            CategoryId = 14,
+                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 852, DateTimeKind.Local).AddTicks(5817),
+                            CreatedIpAddress = "192.168.1.241",
+                            CreatedMachineName = "DESKTOP-SCCLTAH",
+                            Description = "",
+                            Name = "Tekirdağ 35 cl",
+                            Price = 125m,
+                            Status = 1
+                        },
+                        new
+                        {
+                            Id = 66,
+                            CategoryId = 14,
+                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 852, DateTimeKind.Local).AddTicks(8292),
+                            CreatedIpAddress = "192.168.1.241",
+                            CreatedMachineName = "DESKTOP-SCCLTAH",
+                            Description = "",
+                            Name = "Tekirdağ 70 cl",
+                            Price = 205m,
+                            Status = 1
+                        },
+                        new
+                        {
+                            Id = 67,
+                            CategoryId = 14,
+                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 853, DateTimeKind.Local).AddTicks(1447),
+                            CreatedIpAddress = "192.168.1.241",
+                            CreatedMachineName = "DESKTOP-SCCLTAH",
+                            Description = "",
+                            Name = "Tekirdağ T.Serisi 35 cl",
+                            Price = 145m,
+                            Status = 1
+                        },
+                        new
+                        {
+                            Id = 68,
+                            CategoryId = 14,
+                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 853, DateTimeKind.Local).AddTicks(3341),
+                            CreatedIpAddress = "192.168.1.241",
+                            CreatedMachineName = "DESKTOP-SCCLTAH",
+                            Description = "",
+                            Name = "Tekirdağ T.Serisi 70 cl",
+                            Price = 240m,
+                            Status = 1
+                        },
+                        new
+                        {
+                            Id = 69,
+                            CategoryId = 15,
+                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 853, DateTimeKind.Local).AddTicks(6347),
+                            CreatedIpAddress = "192.168.1.241",
+                            CreatedMachineName = "DESKTOP-SCCLTAH",
+                            Description = "Şişe 130 TL / Bottle 130 TL",
+                            Name = "White Wine",
+                            Price = 35m,
+                            Status = 1
+                        },
+                        new
+                        {
+                            Id = 70,
+                            CategoryId = 15,
+                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 853, DateTimeKind.Local).AddTicks(8443),
+                            CreatedIpAddress = "192.168.1.241",
+                            CreatedMachineName = "DESKTOP-SCCLTAH",
+                            Description = "Şişe 35 TL / Bottle 130 TL",
+                            Name = "Red Wine",
+                            Price = 35m,
+                            Status = 1
+                        },
+                        new
+                        {
+                            Id = 71,
+                            CategoryId = 15,
+                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 854, DateTimeKind.Local).AddTicks(373),
+                            CreatedIpAddress = "192.168.1.241",
+                            CreatedMachineName = "DESKTOP-SCCLTAH",
+                            Description = "Şişe 35 TL / Bottle 130 TL",
+                            Name = "Blush",
+                            Price = 35m,
+                            Status = 1
+                        },
+                        new
+                        {
+                            Id = 72,
+                            CategoryId = 16,
+                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 854, DateTimeKind.Local).AddTicks(2247),
+                            CreatedIpAddress = "192.168.1.241",
+                            CreatedMachineName = "DESKTOP-SCCLTAH",
+                            Description = "",
+                            Name = "Gordon Gin",
+                            Price = 45m,
+                            Status = 1
+                        },
+                        new
+                        {
+                            Id = 73,
+                            CategoryId = 16,
+                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 854, DateTimeKind.Local).AddTicks(4111),
+                            CreatedIpAddress = "192.168.1.241",
+                            CreatedMachineName = "DESKTOP-SCCLTAH",
+                            Description = "",
+                            Name = "Beefeather Gin",
+                            Price = 50m,
+                            Status = 1
+                        },
+                        new
+                        {
+                            Id = 74,
+                            CategoryId = 16,
+                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 854, DateTimeKind.Local).AddTicks(5972),
+                            CreatedIpAddress = "192.168.1.241",
+                            CreatedMachineName = "DESKTOP-SCCLTAH",
+                            Description = "",
+                            Name = "Absolut / Smirnoff Vodka",
+                            Price = 45m,
+                            Status = 1
+                        },
+                        new
+                        {
+                            Id = 75,
+                            CategoryId = 16,
+                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 854, DateTimeKind.Local).AddTicks(7944),
+                            CreatedIpAddress = "192.168.1.241",
+                            CreatedMachineName = "DESKTOP-SCCLTAH",
+                            Description = "",
+                            Name = "Jim Beam Bourbon",
+                            Price = 50m,
+                            Status = 1
+                        },
+                        new
+                        {
+                            Id = 76,
+                            CategoryId = 16,
+                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 854, DateTimeKind.Local).AddTicks(9767),
+                            CreatedIpAddress = "192.168.1.241",
+                            CreatedMachineName = "DESKTOP-SCCLTAH",
+                            Description = "",
+                            Name = "Jack Daniels Tennesee Whiskey",
+                            Price = 50m,
+                            Status = 1
+                        },
+                        new
+                        {
+                            Id = 77,
+                            CategoryId = 16,
+                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 855, DateTimeKind.Local).AddTicks(1870),
+                            CreatedIpAddress = "192.168.1.241",
+                            CreatedMachineName = "DESKTOP-SCCLTAH",
+                            Description = "",
+                            Name = "Chivas Regal (12 years)",
+                            Price = 55m,
+                            Status = 1
+                        },
+                        new
+                        {
+                            Id = 78,
+                            CategoryId = 15,
+                            CreatedDate = new DateTime(2022, 5, 31, 14, 29, 3, 855, DateTimeKind.Local).AddTicks(4026),
+                            CreatedIpAddress = "192.168.1.241",
+                            CreatedMachineName = "DESKTOP-SCCLTAH",
+                            Description = "",
+                            Name = "Black Label",
+                            Price = 55m,
+                            Status = 1
+                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole<int>", b =>

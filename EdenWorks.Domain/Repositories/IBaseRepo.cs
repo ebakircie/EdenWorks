@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace EdenWorks.Domain.Repositories
 {
+    // Base Repository
     public interface IBaseRepo<T> where T : IBaseEntity
     {
         void Create (T entity);

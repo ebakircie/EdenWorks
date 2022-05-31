@@ -1,0 +1,47 @@
+﻿@model UpdateProfileDTO
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row ms-2 mt-2 me-2">
+    <div class="col-sm-5">
+        <div class="card card-primary">
+            <div class="card-header">
+                <h3 class="card-title">Edit User</h3>
+            </div>
+            <form asp-action="Edit">
+                <input type="hidden" asp-for="CreatedDate" />
+                <input type="hidden" asp-for="CreatedIpAddress" />
+                <input type="hidden" asp-for="CreatedMachineName" />
+                <input type="hidden" asp-for="Id" />
+                <div asp-validation-summary="ModelOnly" class="text-dan"></div>
+                <div class="card-body">
+                    <div class="form-group">
+                        <label asp-for="UserName">Username</label>
+                        <input class="form-control" asp-for="UserName" />
+                        <span asp-validation-for="UserName" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Email">Email</label>
+                        <input class="form-control" asp-for="Email" />
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Password"></label>
+                        <input asp-for="Password" type="password" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        
+                    <label asp-for="ConfirmPassword">Confirm Password</label>
+                    <input asp-for="ConfirmPassword" type="password" class="form-control" />
+                    <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                    </div>
+                    <div class="card-footer align-items-sm-end">
+						<input type="submit" class="btn btn-primary btn-sm " value="Submit" />
+					</div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

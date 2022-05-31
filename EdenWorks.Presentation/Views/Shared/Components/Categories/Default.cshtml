@@ -1,0 +1,40 @@
+﻿@model List<CategoryVM>
+
+    <style>
+        .scrollmenu {
+  background-color: #333333;
+  overflow: auto;
+  white-space: nowrap;
+  
+}
+
+.scrollmenu a {
+  display: inline-block;
+  color: #fcfcfc;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+}
+
+.scrollmenu a:hover {
+  background-color: #777;
+}
+    </style>
+
+<div class="scrollmenu ">
+    @foreach (var items in Model)
+    {
+            <a href="#@items.CategoryName.Replace(" ", "").ToLower()">@items.CategoryName</a>
+    }
+</div>
+
+@foreach (var category in Model)
+{
+
+    <div class="col-md-6 wow fadeIn" id="@category.CategoryName.Replace(" ", "").ToLower()">
+        <h2 class="mb50"><span class="heading-font text-uppercase">@category.CategoryName</span></h2>
+
+        @await Component.InvokeAsync("Products",category.Id)
+
+    </div>
+}

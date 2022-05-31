@@ -1,8 +1,96 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+﻿<section id="the-menu">
 
-<div class="text-center">
-    <h1 class="display-4">Welcome ???</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+    <div class="section-header text-center">
+        <img src="~/image/constants/logo1.png" alt="Image">
+    </div>
+    <div class="section-inner">
+
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-12 text-center mb100">
+                    <h2 class="section-heading">Browse <span class="theme-accent-color">The</span> Menu</h2>
+
+                    <h3 class="section-subheading secondary-font">Your tastebuds will thank you.</h3>
+                </div>
+
+            </div>
+        </div>
+       
+        <div class="container">
+
+            @* <div class="row mb100">
+                <div class="col-md-4 wow fadeIn">
+                <h2 class="mb50"><span class="heading-font text-uppercase">Fresh Pizza</span></h2>
+                <h3>Lorem Ipsum <span class="theme-accent-color">$8.95</span></h3>
+                <p>No phone no lights no motor car not a single luxury. Like Robinson Crusoe it's primitive as can be.</p>
+                <h3>Lorem Ipsum <span class="theme-accent-color">$8.95</span></h3>
+                <p>No phone no lights no motor car not a single luxury. Like Robinson Crusoe it's primitive as can be.</p>
+                <h3>Lorem Ipsum <span class="theme-accent-color">$8.95</span></h3>
+                <p>No phone no lights no motor car not a single luxury. Like Robinson Crusoe it's primitive as can be.</p>
+                <h3>Lorem Ipsum <span class="theme-accent-color">$8.95</span></h3>
+                <p>No phone no lights no motor car not a single luxury. Like Robinson Crusoe it's primitive as can be.</p>
+                </div>
+
+                <div class="col-md-4 wow fadeIn">
+                <h2 class="mb50"><span class="heading-font text-uppercase">Famility Favourites</span></h2>
+                <h3>Lorem Ipsum <span class="theme-accent-color">$8.95</span></h3>
+                <p>No phone no lights no motor car not a single luxury. Like Robinson Crusoe it's primitive as can be.</p>
+                <h3>Lorem Ipsum <span class="theme-accent-color">$8.95</span></h3>
+                <p>No phone no lights no motor car not a single luxury. Like Robinson Crusoe it's primitive as can be.</p>
+                <h3>Lorem Ipsum <span class="theme-accent-color">$8.95</span></h3>
+                <p>No phone no lights no motor car not a single luxury. Like Robinson Crusoe it's primitive as can be.</p>
+                <h3>Lorem Ipsum <span class="theme-accent-color">$8.95</span></h3>
+                <p>No phone no lights no motor car not a single luxury. Like Robinson Crusoe it's primitive as can be.</p>
+                </div>
+
+                <div class="col-md-4 wow fadeIn">
+                <h2 class="mb50"><span class="heading-font text-uppercase">Catch of the Day</span></h2>
+                <h3>Lorem Ipsum <span class="theme-accent-color">$8.95</span></h3>
+                <p>No phone no lights no motor car not a single luxury. Like Robinson Crusoe it's primitive as can be.
+                No phone no lights no motor car not a single luxury. Like Robinson Crusoe it's primitive as can be.
+                No phone no lights no motor car not a single luxury. Like Robinson Crusoe it's primitive as can be.
+                </p>
+                <h3>Lorem Ipsum <span class="theme-accent-color">$8.95</span></h3>
+                <p>No phone no lights no motor car not a single luxury. Like Robinson Crusoe it's primitive as can be.</p>
+                <h3>Lorem Ipsum <span class="theme-accent-color">$8.95</span></h3>
+                <p>No phone no lights no motor car not a single luxury. Like Robinson Crusoe it's primitive as can be.</p>
+                <h3>Lorem Ipsum <span class="theme-accent-color">$8.95</span></h3>
+                <p>No phone no lights no motor car not a single luxury. Like Robinson Crusoe it's primitive as can be.</p>
+                </div>
+                </div>*@
+
+            <div class="row">
+                @await Component.InvokeAsync("Categories")
+            </div>
+
+            @await Component.InvokeAsync("Products")
+        </div>
+    </div>
+</section>
+
+@*@await Component.InvokeAsync("Categories")*@
+
+
+@*
+    <div id="fh5co-footer">
+    <div class="container">
+    <div class="row row-padded">
+    <div class="col-md-12 text-center">
+    <p class="to-animate">
+    &copy; 2016 Foodee Free HTML5 Template. <br> Designed by <a href="http://freehtml5.co/" target="_blank">FREEHTML5.co</a> Demo Images: <a href="http://pexels.com/" target="_blank">Pexels</a> <br> Tasty Icons Free <a href="http://handdrawngoods.com/store/tasty-icons-free-food-icons/" target="_blank">handdrawngoods</a>
+    </p>
+    <p class="text-center to-animate"><a href="#" class="js-gotop">Go To Top</a></p>
+    </div>
+    </div>
+    <div class="row">
+    <div class="col-md-12 text-center">
+    <ul class="fh5co-social">
+    <li class="to-animate-2"><a href="#"><i class="icon-facebook"></i></a></li>
+    <li class="to-animate-2"><a href="#"><i class="icon-twitter"></i></a></li>
+    <li class="to-animate-2"><a href="#"><i class="icon-instagram"></i></a></li>
+    </ul>
+    </div>
+    </div>
+    </div>
+    </div>*@
