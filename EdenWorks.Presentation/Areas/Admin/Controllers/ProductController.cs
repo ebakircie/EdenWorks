@@ -101,6 +101,7 @@ namespace EdenWorks.Presentation.Areas.Admin.Controllers
             return View(result);
         }
 
+        [HttpPost]
         public async Task<IActionResult> ProductSearch (string name)
         {
             if (!string.IsNullOrEmpty(name))

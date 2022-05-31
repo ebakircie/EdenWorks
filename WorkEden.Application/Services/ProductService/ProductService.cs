@@ -9,11 +9,7 @@ using EdenWorks.Infrastructure.Utilities;
 using Microsoft.EntityFrameworkCore;
 using SixLabors.ImageSharp;
 using SixLabors.ImageSharp.Processing;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace EdenWorks.Application.Services.ProductService
 {
@@ -52,7 +48,7 @@ namespace EdenWorks.Application.Services.ProductService
                 if (product.ImagePath != null)
                 {
                     string imagepath = product.ImagePath;
-                    System.IO.File.Delete("wwwroot/" + imagepath); // ask if needed
+                    File.Delete("wwwroot/" + imagepath);
                 }
                 using var image = Image.Load(model.UploadPath.OpenReadStream());
                 image.Mutate(x => x.Resize(256, 256));
@@ -158,7 +154,7 @@ namespace EdenWorks.Application.Services.ProductService
                     CategoryName = x.Category.CategoryName
                 },
                 where: x => x.Status != Status.Passive,
-                orderBy: x => x.OrderBy(x => x.Category.CategoryName),
+                orderBy: x => x.OrderBy(x => x.Category.Id),
                 include: x => x.Include(x => x.Category));
 
             return products;

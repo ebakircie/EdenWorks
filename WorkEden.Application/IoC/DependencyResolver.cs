@@ -19,6 +19,7 @@ namespace EdenWorks.Application.IoC
 {
     public class DependencyResolver : Module
     {
+        // Resolving dependencies with Autofac Inversion of Control container.
         protected override void Load(ContainerBuilder builder)
         {
             builder.RegisterType<CategoryRepo>().As<ICategoryRepo>().InstancePerLifetimeScope();
@@ -48,7 +49,7 @@ namespace EdenWorks.Application.IoC
             .InstancePerLifetimeScope();
 
             #endregion
-            
+
             #region Fluent Validation
             builder.RegisterType<CreateCategoryValidation>().As<IValidator<CreateCategoryDTO>>().InstancePerLifetimeScope();
             builder.RegisterType<UpdateCategoryValidation>().As<IValidator<UpdateCategoryDTO>>().InstancePerLifetimeScope();
@@ -56,6 +57,7 @@ namespace EdenWorks.Application.IoC
             builder.RegisterType<UpdateProductValidation>().As<IValidator<UpdateProductDTO>>().InstancePerLifetimeScope();
             builder.RegisterType<RegisterAppUserValidation>().As<IValidator<RegisterDTO>>().InstancePerLifetimeScope();
             builder.RegisterType<LoginAppUserValidation>().As<IValidator<LoginDTO>>().InstancePerLifetimeScope();
+            builder.RegisterType<EditAppUserValidation>().As<IValidator<UpdateProfileDTO>>().InstancePerLifetimeScope();
             #endregion
 
             base.Load(builder);

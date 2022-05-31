@@ -1,5 +1,6 @@
 ﻿using EdenWorks.Domain.Entites;
 using EdenWorks.Infrastructure.EntityTypeConfig;
+using EdenWorks.Infrastructure.SeedData;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
@@ -22,6 +23,10 @@ namespace EdenWorks.Infrastructure
             builder.ApplyConfiguration(new AppUserConfig());
             builder.ApplyConfiguration(new CategoryConfig());
             builder.ApplyConfiguration(new ProductConfig());
+
+            builder.ApplyConfiguration(new AdminSeeding());
+            builder.ApplyConfiguration(new CategorySeeding());
+            builder.ApplyConfiguration(new ProductSeeding());
 
 
             base.OnModelCreating(builder);

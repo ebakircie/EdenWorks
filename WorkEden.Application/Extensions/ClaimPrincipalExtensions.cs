@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace EdenWorks.Application.Extensions
 {
+    /// <summary>
+    ///  A simple static class to catch logged user's information via ClaimsPrincipal.
+    /// </summary>
     public static class ClaimPrincipalExtensions
     {
         public static string GetUserId(this ClaimsPrincipal claimsPrincipal)

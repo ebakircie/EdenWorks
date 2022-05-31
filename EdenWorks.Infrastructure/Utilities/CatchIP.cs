@@ -6,7 +6,9 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace EdenWorks.Infrastructure.Utilities
-{
+{/// <summary>
+/// Gets ip for the audit properties.
+/// </summary>
     public static class CatchIP
     {
         public static string GetIpAddress()

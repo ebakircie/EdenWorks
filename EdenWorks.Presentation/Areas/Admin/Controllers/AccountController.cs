@@ -1,7 +1,9 @@
 ﻿using EdenWorks.Application.Extensions;
 using EdenWorks.Application.Models.DTOs.EntryDTO;
 using EdenWorks.Application.Services.AppUserService;
+using EdenWorks.Domain.Entites;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EdenWorks.Presentation.Areas.Admin.Controllers
@@ -10,9 +12,11 @@ namespace EdenWorks.Presentation.Areas.Admin.Controllers
     public class AccountController : Controller
     {
         private readonly IAppUserService _appUserService;
-        public AccountController(IAppUserService appUserService)
+        private readonly UserManager<AppUser> _userManager;
+        public AccountController(IAppUserService appUserService, UserManager<AppUser> userManager)
         {
             _appUserService = appUserService;
+            _userManager = userManager;
         }
 
         [NeedAuthentication]
@@ -30,7 +34,7 @@ namespace EdenWorks.Presentation.Areas.Admin.Controllers
                 var result = await _appUserService.Register(model);
                 if (result.Succeeded)
                 {
-                    return RedirectToAction("Index");
+                    return RedirectToAction("AdminMain", "Home");
 
                 }
                 else
@@ -46,6 +50,7 @@ namespace EdenWorks.Presentation.Areas.Admin.Controllers
 
         [AllowAnonymous]
         public async Task<IActionResult> LogIn(string? returnUrl = "/")
+
         {
             if (User.Identity.IsAuthenticated)
             {
@@ -71,18 +76,6 @@ namespace EdenWorks.Presentation.Areas.Admin.Controllers
             return View(model);
         }
 
-        //private IActionResult RedirectToLocal(string returnUrl)
-        //{
-        //    if (Url.IsLocalUrl(returnUrl))
-        //    {
-        //        return Redirect(returnUrl);
-        //    }
-        //    else
-        //    {
-        //        return RedirectToAction("AdminMain", "Home");
-        //    }
-        //}
-
         public async Task<IActionResult> Logout()
         {
             await _appUserService.LogOut();
@@ -91,32 +84,32 @@ namespace EdenWorks.Presentation.Areas.Admin.Controllers
         }
 
         [NeedAuthentication]
-        public async Task<IActionResult> Edit(string userName)
+        public async Task<IActionResult> Edit()
         {
-            if (userName == User.Identity.Name)
+            var user = await _appUserService.GetbyId(Convert.ToInt32(User.GetUserId())); // static extension class 
+
+            if (user == null)
             {
-                var user = await _appUserService.GetbyId(Convert.ToInt32(User.GetUserId()));
-
-                if (user == null)
-                    return NotFound();
-
-                return View(user);
+                return NotFound();
             }
             else
             {
-                RedirectToAction("Index", "Home");
-                return View();
+                return View(user);
             }
+
+
+
         }
 
         [NeedAuthentication]
+        [HttpPost]
         public async Task<IActionResult> Edit(UpdateProfileDTO model)
         {
             if (ModelState.IsValid)
             {
                 await _appUserService.UpdateUser(model);
                 TempData["Success"] = "Profile successfully edited.";
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("AdminMain", "Home");
             }
             else
             {

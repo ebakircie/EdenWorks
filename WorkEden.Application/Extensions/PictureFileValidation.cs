@@ -8,6 +8,9 @@ using System.Threading.Tasks;
 
 namespace EdenWorks.Application.Extensions
 {
+    /// <summary>
+    /// Checks if uploaded file format is a "jpg, jpeg or png"!
+    /// </summary>
     public class PictureFileValidation:ValidationAttribute
     {
         protected override ValidationResult? IsValid(object? value, ValidationContext validationContext)
@@ -22,7 +25,7 @@ namespace EdenWorks.Application.Extensions
 
                 if (!result)
                 {
-                    return new ValidationResult("File format is not valid, please choose jpog, jpeg or png");
+                    return new ValidationResult("File format is not valid, please choose jpg, jpeg or png");
                 }
             }
             return ValidationResult.Success;

@@ -1,0 +1,35 @@
+﻿@model List<ProductVM>
+					@foreach (var product in Model)
+{
+    <div class="food-menu-item catcher-content">
+        <div class="row">
+            @if (product.ImagePath != null)
+            {
+                <div class="col-xs-3 smallPicture">
+                    <h3>
+                        <span class="theme-accent-color" style="float:right; padding-top:5px">@product.Price ₺ </span>
+                    </h3>
+                    <img src=@product.ImagePath class="img-responsive smallPictureBorder">     
+                </div>
+                <div class="col-xs-9" style="padding-bottom:15px; ">
+                    <h3>
+                        @product.Name
+                    </h3>
+                    <p style="text-align:justify!important;">@product.Description</p>
+                </div>
+            }
+            else
+            {
+                <div class="col-xs-3" style="padding-right:0px; width: 23%;">
+                    <h3> <span class="theme-accent-color"> @product.Price ₺ </span>  </h3>
+                </div>
+                <div class="col-xs-9" style="padding-bottom:5px; padding-left:5px; padding-right:3px;">
+                    <h3>@product.Name </h3>
+                    <p>@product.Description</p>
+                </div>
+            }
+
+        </div>
+    </div>
+
+}

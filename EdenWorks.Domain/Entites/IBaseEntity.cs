@@ -9,7 +9,7 @@ namespace EdenWorks.Domain.Entites
 {
     public interface IBaseEntity
     {
-        
+        //Basic Audit fields for all entities. 
          DateTime CreatedDate { get; set; }
          string CreatedIpAddress { get; set; }
          string CreatedMachineName { get; set; }

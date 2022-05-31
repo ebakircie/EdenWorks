@@ -3,7 +3,7 @@
 @inject SignInManager<AppUser> SignInManager
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -19,6 +19,7 @@
             text-decoration: none;
         }
     </style>
+
 </head>
 <body>
     <div class="general">
@@ -32,36 +33,50 @@
 
                 <ul class="list-unstyled components">
                     @*  <p>Dummy Heading</p>*@
-                    <li>
+                    <li class="active">
                         <a asp-area="Admin" asp-controller="Home" asp-action="AdminMain">Home</a>
                     </li>
                     <li class="active">
                         <a href="#categorySubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Category</a>
                         <ul class="collapse list-unstyled" id="categorySubmenu">
-                            <li>
+                            <li class="active">
                                 <a asp-area="Admin" asp-controller="Category" asp-action="Create">Create Category</a>
                             </li>
-                            <li>
+                            <li class="active">
                                 <a asp-area="Admin" asp-controller="Category" asp-action="List">Category List</a>
+                            </li>
+                              <li class="active">
+                                <a asp-area="Admin" asp-controller="Category" asp-action="PassiveList">Passive List</a>
                             </li>
                         </ul>
                     </li>
 
-                    <li>
+                    <li class="active">
                         <a href="#productSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Products</a>
                         <ul class="collapse list-unstyled" id="productSubmenu">
-                            <li>
+                            <li class="active">
                                 <a asp-area="Admin" asp-controller="Product" asp-action="Create">Create Product</a>
                             </li>
-                            <li>
+                            <li class="active">
                                 <a asp-area="Admin" asp-controller="Product" asp-action="List">All Products</a>
+                            </li>
+                             <li class="active">
+                                <a asp-area="Admin" asp-controller="Product" asp-action="PassiveList">Passive Products</a>
                             </li>
                         </ul>
                     </li>
-                    <li>
-                        <a asp-area="Admin" asp-controller="Account" asp-action="Register">Create Account</a>
+                    <li class="active">
+                        <a href="#accountSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Account</a>
+                        <ul class="collapse list-unstyled" id="accountSubmenu">
+                            <li class="active">
+                                 <a asp-area="Admin" asp-controller="Account" asp-action="Register">Create Account</a>
+                            </li class="active">
+                            <li class="active">
+                                 <a asp-area="Admin" asp-controller="Account" asp-action="Edit">Edit Account</a>
+                            </li>
+                        </ul>
                     </li>
-                    <li>
+                    <li class="active">
                         <a href="#">Contact</a>
                     </li>
                 </ul>
@@ -69,12 +84,12 @@
             <!-- Page Content  -->
             <div id="content">
 
-                <nav class="navbar navbar-expand-md  navbar-dark bg-dark" style{border-radius: 4px;}>
-                    <div class="container">
+                <nav class="navbar navbar-expand-md  navbar-dark bg-dark" style="padding-left:0px;">
+                    <div class="container" style ="padding:0px;">
 
                         <button type="button" id="sidebarCollapse" class="btn btn-info">
                             <i class="fas fa-align-left"></i>
-                            <span>Toggle Sidebar</span>
+                            <span>Toggle</span>
                         </button>
 
 

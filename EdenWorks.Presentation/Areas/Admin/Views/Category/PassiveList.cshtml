@@ -3,7 +3,7 @@
     ViewData["Title"] = "PassiveList";
 }
 
-<div class="row ml-2 mt-2 mr-2">
+<div class="row  ms-3">
     <div class="col-sm-6">
         <div class="card card-primary">
             <div class="card-header">
@@ -24,7 +24,7 @@
                         {
                             <tr>
                                 <td>@item.Id</td>
-                                <td>@item.CategoryName.ToUpper()</td>
+                                <td>@item.CategoryName</td>
                                 <td>
                                     <a asp-action="SetActive" asp-route-id="@item.Id" class="btn btn-sm btn-primary">Active</a>
                                 </td>

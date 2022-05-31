@@ -13,7 +13,7 @@ using System.Threading.Tasks;
 
 namespace EdenWorks.Application.Services.AppUserService
 {
-    public class AppUserService: IAppUserService
+    public class AppUserService : IAppUserService
     {
         private readonly IMapper _mapper;
         private readonly IAppUserRepo _appUserRepo;
@@ -21,7 +21,7 @@ namespace EdenWorks.Application.Services.AppUserService
         private readonly SignInManager<AppUser> _signInManager;
 
         public AppUserService(IMapper mapper,
-                              IAppUserRepo appUserRepo,       
+                              IAppUserRepo appUserRepo,
                               UserManager<AppUser> userManager,
                               SignInManager<AppUser> signInManager)
         {
@@ -40,9 +40,11 @@ namespace EdenWorks.Application.Services.AppUserService
                     Id = x.Id,
                     UserName = x.UserName,
                     Email = x.Email,
-
+                    CreatedDate = x.CreatedDate,
+                    CreatedIpAddress = x.CreatedIpAddress,
+                    CreatedMachineName = x.CreatedMachineName,
                 },
-                where: x => x.Id == id && x.Status != Status.Passive
+                where: x => x.Id == id
                 );
             var model = _mapper.Map<UpdateProfileDTO>(user);
             return model;
@@ -64,25 +66,20 @@ namespace EdenWorks.Application.Services.AppUserService
             var user = _mapper.Map<AppUser>(model);
 
             var result = await _userManager.CreateAsync(user, model.Password);
-            //if (result.Succeeded)
-            //{
-            //    await _signInManager.SignInAsync(user, isPersistent: false);
-            //}
             return result;
         }
 
         public async Task UpdateUser(UpdateProfileDTO model)
         {
             var user = await _appUserRepo.GetDefault(x => x.Id == model.Id);
-            
+
             if (user != null)
             {
                 if (model.UserName != null)
                 {
-                    await _userManager.SetUserNameAsync(user, model.UserName);
-                    await _signInManager.SignInAsync(user, false);
+                   var result =  await _userManager.SetUserNameAsync(user, model.UserName);
                 }
-                if (model.Email!=null)
+                if (model.Email != null)
                 {
                     await _userManager.SetEmailAsync(user, model.Email);
                 }
