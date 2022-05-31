@@ -22,10 +22,12 @@ namespace EdenWorks.Application.IoC
         // Resolving dependencies with Autofac Inversion of Control container.
         protected override void Load(ContainerBuilder builder)
         {
+            //Repositories
             builder.RegisterType<CategoryRepo>().As<ICategoryRepo>().InstancePerLifetimeScope();
             builder.RegisterType<ProductRepo>().As<IProductRepo>().InstancePerLifetimeScope();
             builder.RegisterType<AppUserRepo>().As<IAppUserRepo>().InstancePerLifetimeScope();
 
+            //Services
             builder.RegisterType<CategoryService>().As<ICategoryService>().InstancePerLifetimeScope();
             builder.RegisterType<ProductService>().As<IProductService>().InstancePerLifetimeScope();
             builder.RegisterType<AppUserService>().As<IAppUserService>().InstancePerLifetimeScope();

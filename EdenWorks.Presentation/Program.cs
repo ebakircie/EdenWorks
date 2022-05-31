@@ -18,7 +18,7 @@ builder.Services.AddControllers().AddFluentValidation(fv =>
     fv.RegisterValidatorsFromAssemblyContaining<Program>();
 });
 
-builder.Services.AddRazorPages().AddRazorRuntimeCompilation();
+builder.Services.AddRazorPages().AddRazorRuntimeCompilation(); //helps to see instant differences within views.
 
 
 
