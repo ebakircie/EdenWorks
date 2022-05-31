@@ -96,9 +96,6 @@ namespace EdenWorks.Presentation.Areas.Admin.Controllers
             {
                 return View(user);
             }
-
-
-
         }
 
         [NeedAuthentication]

@@ -109,7 +109,7 @@
                                 </li>
                                 </ul>*@
                         </div>
-                        @using (Html.BeginForm("ProductSearch", "Product", FormMethod.Get))
+                        @using (Html.BeginForm("ProductSearch", "Product"))
                         {
                             @Html.TextBox("Name")
                             <input type="submit" value="Search">

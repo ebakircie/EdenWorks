@@ -18,7 +18,7 @@ namespace EdenWorks.Infrastructure.SeedData
         {
             var hasher = new PasswordHasher<AppUser>();
             builder.HasData(
-                new AppUser { Id = 9, UserName = "admin",NormalizedUserName="ADMIN", Email = "admin@gmail.com",PasswordHash=hasher.HashPassword(null,"qwxx123"),SecurityStamp=Guid.NewGuid().ToString(),
+                new AppUser { Id = 9, UserName = "admin",NormalizedUserName="ADMIN", Email = "admin@gmail.com",PasswordHash=hasher.HashPassword(null,"1234567"),SecurityStamp=Guid.NewGuid().ToString(),
                     Status=Status.Active,CreatedDate=DateTime.Now }
                 );
 
