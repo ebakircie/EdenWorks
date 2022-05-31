@@ -24,6 +24,7 @@
 
   <ItemGroup>
     <Folder Include="Views\Shared\Partials\" />
+    <Folder Include="wwwroot\assets\api\" />
     <Folder Include="wwwroot\image\constants\" />
     <Folder Include="wwwroot\image\products\" />
   </ItemGroup>
